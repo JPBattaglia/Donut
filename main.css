@@ -86,7 +86,7 @@ html{
         border-radius: 15px;
         background:url(SkylineSLIDE.png);
         background-size: 100% 120%;
-        border: #ff75d1 double 5px;
+        border: #fc32a4 double 5px;
         max-width:100%;
         max-height: calc(100vh - 6rem);
         overflow-y: auto;
@@ -139,7 +139,7 @@ h3:hover{
     font-weight: bolder;
     color: #fff;
     text-shadow:
-       2px 1px 0 #ff6ed1;
+       2px 1px 0 #fc32a4;
 }
 
 #menumade {
@@ -160,13 +160,13 @@ h1{
 
 h2{
     font-size: 35px;
-    font-family: 'Quintessential', serif;
+    font-family: 'Lexend+Deca', serif;
     font-weight: bolder;
     text-align: center;
     color: #fff;
     text-shadow:
-       -1px -1px 0 #f5429e,  
-       1px 1px 0 #f5429e;
+       -1px -1px 0 #fc32a4,  
+       1px 1px 0 #fc32a4;
     margin: 40px 0;
 }
 
@@ -180,8 +180,8 @@ h3{
     margin: 20px auto;
     color: #fff;
     text-shadow:
-       -1px -1px 0 #f5429e,  
-       1px 1px 0 #f5429e;
+       -1px -1px 0 #fc32a4,  
+       1px 1px 0 #fc32a4;
     
 }
 
@@ -304,7 +304,8 @@ nav{
     margin-bottom: -20px;
     width: 99%;
     height: 165px;
-    background:  #fc32a4;
+    background:  url(Navbar.png);
+    background-size: 50% 100%;
     border: 10px double black;
     border-radius: 20px;
     text-align: center;
