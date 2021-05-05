@@ -276,7 +276,7 @@ p{
 }
 
 .sidenav a:hover {
-    color: #ff75d1;
+    color: #000;
     text-shadow:
        1px 1px 0 Black,
       -1px -1px 0 white,  
