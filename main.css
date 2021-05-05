@@ -160,13 +160,13 @@ h1{
 
 h2{
     font-size: 35px;
-    font-family: 'Tauri', serif;
+    font-family: 'Quintessential', serif;
     font-weight: bolder;
-    color: #f5429e;
     text-align: center;
+    color: #fff;
     text-shadow:
        -1px -1px 0 #f5429e,  
-       1px 1px 0 #fff;
+       1px 1px 0 #f5429e;
     margin: 40px 0;
 }
 
@@ -178,10 +178,10 @@ h3{
     font-weight: bolder;
     text-align: center;
     margin: 20px auto;
-    color: #f5429e;
+    color: #fff;
     text-shadow:
        -1px -1px 0 #f5429e,  
-       1px 1px 0 #fff;
+       1px 1px 0 #f5429e;
     
 }
 
@@ -248,9 +248,9 @@ p{
     z-index: 1;
     top: 0;
     right: 0;
-    background: url(SLIDENAV2.png);
+    background: url(PinkSprinkles.jpg);
     background-repeat: repeat;
-    background-size: 100% 100%;
+    background-size: 50% 10%;
     overflow-x: hidden;
     transition: .8s;
     padding-top: 150px;
@@ -268,10 +268,10 @@ p{
     text-align: center;
     text-shadow:
        1px 1px 0 black,
-      -1px -1px 0 #ff75d1,  
-       1px -1px 0 #ff75d1,
-      -1px 1px 0 #ff75d1,
-       1px 1px 0 #ff75d1;
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
     text-decoration: none;
 }
 
@@ -428,6 +428,7 @@ img {
 #form h2, #mobilemenu h2{
     font-size: 50px;
 }
+
 
 /*=======================================*/
 /*=======================================*/
@@ -661,7 +662,7 @@ img {
         margin: 17px auto;      
         width: 98%;
         height: 110px;
-        border-bottom: 10px double black;
+        border: 8px double black;
         border-radius: 15px;
     }
     
@@ -732,8 +733,8 @@ img {
     
     .sidenav .closebtn {
         margin: 0px;
-        font-size: 32px;
-        padding: 35px 33px 28px 22px;
+        font-size: 44px;
+        padding: 26px 30px 28px 22px;
     }
     
     #mobilemenu{
@@ -827,7 +828,7 @@ img {
     }
 
     h2{
-        font-size: 22px;
+        font-size: 20px;
     }
     
     #mobilemenu h2{
@@ -837,13 +838,15 @@ img {
     
     
     h3{
-        font-size: 22px;
+        font-size: 20px;
         margin: auto;
         width: 150px;
     }
     
     h5{
-        font-size: 22px;    
+        font-size: 20px; 
+        margin: -3px auto;
+        color: #fff;
     }
     
     p{
@@ -1023,7 +1026,7 @@ img {
         border-radius: 15px;
         background: url(SkylineSLIDE.png);
         background-size: 100% 130%;
-        border: #807e31 double 3px;
+        border: #ff6ed1 double 3px;
         max-width: 100%;
         max-height: calc(100vh - 6rem);
         overflow-y: auto;
@@ -1293,6 +1296,6 @@ img {
     footer p{
         width: 100%;
         font-weight: bolder;
-        color: #fff;
+        color: #ff6ed1;
     }
 }
