@@ -99,7 +99,7 @@ html{
 
 
 .animated {
-        background-color: black;
+        background-color: #000;
         background-position: left top;
         margin-bottom:30px;
         -webkit-animation-duration: 3s;animation-duration: 3s;
@@ -135,10 +135,11 @@ h4:hover{
     }
 
 h3:hover{
+    transition: 1s;
     font-weight: bolder;
-    color: #ff3ddb;
+    color: #fff;
     text-shadow:
-       1px 1px 0 #ff6ed1;
+       2px 1px 0 #ff6ed1;
 }
 
 #menumade {
@@ -170,11 +171,13 @@ h2{
 }
 
 h3{
-    font-size: 28px;
+    transition: 1s;
+    font-size: 32px;
+    width: 250px;
     font-family: 'Quintessential', serif;
     font-weight: bolder;
     text-align: center;
-    margin: 20px 0;
+    margin: 20px auto;
     color: #f5429e;
     text-shadow:
        -1px -1px 0 #f5429e,  
@@ -640,13 +643,12 @@ img {
         margin-top: 50px;
         text-align: center;
         font-size: 20PX;
-        color: #fff; 
     }
     
     footer p{
         width: 100%;
         font-weight: bolder;
-        color: #fff;
+        color: #ff6ed1;
     }
 
     .logo{
@@ -656,8 +658,8 @@ img {
     }
     
     nav{
-        margin: 17px 0;      
-        width: 99%;
+        margin: 17px auto;      
+        width: 98%;
         height: 110px;
         border-bottom: 10px double black;
         border-radius: 15px;
@@ -836,6 +838,8 @@ img {
     
     h3{
         font-size: 20px;
+        margin: auto;
+        width: 140px;
     }
     
     h5{
@@ -999,14 +1003,13 @@ img {
         width: 100%;
         text-align: center;
         font-size: 20PX;
-        color: #fff; 
     }
     
     footer p{
         width: 100%;
         font-weight: bolder;
-        font-size: 15px;
-        color: #fff;
+        font-size: 18px;
+        color: #ff6ed1;
     }
     
     .modalDialog > div {
