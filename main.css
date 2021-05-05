@@ -711,7 +711,7 @@ img {
         margin: 11px auto;
         padding: 10px 12px;
         height: 100px;
-        border-bottom: 10px double black;
+        border: 8px double black;
         border-radius: 14px;
     }
     
