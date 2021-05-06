@@ -286,7 +286,7 @@ p{
 }
 
 .sidenav .closebtn {
-    margin: 0 40px;
+    margin: 10px 30px;
     padding: 75px 25px 28px 22px;
     position: absolute;
     top: 0px;
@@ -336,12 +336,12 @@ nav p{
     float: right;
     width: 53px;
     height: 40px;
-    margin: 50px 50px;
+    margin: 50px 25px;
     z-index: 100;
 }
 
 .navicon:hover{
-    filter: drop-shadow(2px 2px 5px #ff75d1);
+    filter: drop-shadow(2px 4px 5px #ff75d1);
 }
 
 .logo{
@@ -350,7 +350,7 @@ nav p{
     -webkit-transition: width 2s, height 2s, 
     -webkit-transform 1.5s; /* Safari */
     transition: width 2s, height 2s, transform 1.5s;
-    
+    filter: drop-shadow(4px 3px 5px #000);
 }
 
 .logo:hover{
@@ -435,12 +435,12 @@ img {
 /*=======================================*/
 
 @media (max-width: 1000px) and (min-width: 701px){
-     #rotate{
+     #rotate, .mobile{
         display: none;
     }
     
     .sidenav .closebtn {
-    margin: 0 15px;
+    margin: 15px;
     padding: 42px 23px 28px 22px;
     }
     
@@ -668,7 +668,7 @@ img {
     }
     
     .navicon{
-        margin: 30px 25px 0px 0px;
+        margin: 25px 15px 0px 0px;
         width: 48px;
         height: 36px;
     }
@@ -706,6 +706,7 @@ img {
     .logo{
         max-width: 125px;
         margin:  -22px 0 0 ;
+        filter: drop-shadow(2px 2px 4px #000);
     }
     
     nav{
@@ -734,8 +735,8 @@ img {
     
     .sidenav .closebtn {
         margin: 0px;
-        font-size: 44px;
-        padding: 26px 30px 28px 22px;
+        font-size: 34px;
+        padding: 36px 38px 28px 22px;
     }
     
     #mobilemenu{
@@ -746,7 +747,7 @@ img {
     .navicon {
         width: 35px;
         height: 28px;
-        margin: 25px 25px 0px 0px;
+        margin: 12px 5px 0px 0px;
     }
     
     #rotate{
@@ -1045,6 +1046,10 @@ img {
 
 @media (max-width: 1200px) and (min-width: 1000px){
     
+    .mobile{
+        display: none;
+    }
+    
     #stage {
         max-width: 1000px;
         margin: 18px 0;
@@ -1082,7 +1087,7 @@ img {
 /*=======================================*/
 
 @media (min-width: 1000px){
-     #rotate, .navicon1{
+     #rotate, .navicon1, .mobile{
         display: none;
     }
     
