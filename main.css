@@ -721,6 +721,10 @@ img {
 
 @media (max-width: 700px){
     
+    .desktop{
+        display: none;
+    }
+    
     .animated{
         background: black;
         background-size: cover;
