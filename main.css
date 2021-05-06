@@ -248,9 +248,9 @@ p{
     z-index: 1;
     top: 0;
     right: 0;
-    background: url(PinkSprinkles.jpg);
+    background: url(Sprinkles.jpeg);
     background-repeat: repeat;
-    background-size: 50% 10%;
+    background-size: 100% 25%;
     overflow-x: hidden;
     transition: .8s;
     padding-top: 150px;
@@ -259,30 +259,32 @@ p{
 }
 
 .sidenav a {
-    padding: 45px 10px;
+    letter-spacing: 2px;
+    font-family: 'lexend deca';
+    margin: 85px 10px;
     font-size: 28px;
-    color: white;
+    color: black;
     display: block;
     transition: 1s;
     max-width: 100%;
     text-align: center;
     text-shadow:
-       1px 1px 0 black,
-      -1px -1px 0 #000,  
-       1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
+       1px 1px 0 #ff75d1,
+      -1px -1px 0 #ff75d1,  
+       1px -1px 0 #ff75d1,
+      -1px 1px 0 #ff75d1,
+       1px 1px 0 #ff75d1;
     text-decoration: none;
 }
 
 .sidenav a:hover {
-    color: #000;
+    color: #ff75d1;
     text-shadow:
        1px 1px 0 Black,
-      -1px -1px 0 white,  
-       1px -1px 0 white,
-      -1px 1px 0 white,
-       1px 1px 0 white;
+      -1px -1px 0 Black,  
+       1px -1px 0 Black,
+      -1px 1px 0 Black,
+       1px 1px 0 Black;
 }
 
 .sidenav .closebtn {
@@ -440,6 +442,16 @@ img {
     width: 80%;
     margin: 0 auto;
     border: 3px double #ff75d1;
+}
+
+.lotto{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.lotto img{
+    width: 200px;
 }
 
 
@@ -1049,6 +1061,15 @@ img {
     .close{
         right: 5px;
         top: 5px;
+    }
+    
+    .lotto img{
+        width: 100px;
+        margin-bottom: 50px;
+    }
+    
+    .menu{
+        margin-top: 20px;
     }
 }
 
