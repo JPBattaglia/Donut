@@ -148,16 +148,6 @@ h3:hover{
     filter: drop-shadow(2px 2px 1px #010);
 }
 
-h1{
-    color: #fff;
-    background: #000;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-    font-family: 'Kanit';
-    text-align: center;
-    font-weight: bolder;
-}
-
 h2{
     font-size: 35px;
     font-family: 'Lexend+Deca', serif;
@@ -520,10 +510,6 @@ img {
         border: 8px double #775;
     }
     
-    h2{
-        margin-top: 100px;
-    }
-    
     h4{
         font-size: 15px;
         padding: 8px 10px;
@@ -545,18 +531,6 @@ img {
         margin: 5px;
     }
     
-    #reservation{
-        color:#ffeecc;
-        padding: 10px 25px;
-        background: repeating-linear-gradient(to top, #500, #900, red 100%);
-        width: 100px;
-        border-radius: 30px;
-        font-family: 'federant';
-        text-decoration: none;
-        border: .5px solid #600;
-        box-shadow: 2px 4px 8px #700;
-        margin: 5px 80px;
-    }
     
     textarea, input{
         font-family: 'federant', serif;
@@ -570,11 +544,12 @@ img {
     
     #message{
         height: 200px;
+        background-color: #f5f5f0;
     }
 
     select{
         font-family: 'federant', serif;
-        color: #a00;
+        color: #f5429e;
         text-align: center;
         font-size: 18px;
         font-weight: bolder;
@@ -600,11 +575,11 @@ img {
     input[type=text], select, textarea {
         background-color: #f5f5f0;
         margin: auto;
-        box-shadow: 2px 4px 10px #111109;
+        box-shadow: 2px 4px 10px #f5429e;
         text-align: center;
         width: 60%; /* Full width */
         padding: 8px; /* Some padding */  
-        border: 3px solid #999966; /* Gray border */
+        border: 3px solid #f5429e; /* Gray border */
         border-radius: 25px; /* Rounded borders */
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 30px; /* Add a top margin */
@@ -647,7 +622,7 @@ img {
     }
     
     #fname{
-        margin-top: 100px;
+        margin-top: 0px;
     }
 
     /* Add a background color and some padding around the form */
@@ -767,6 +742,10 @@ img {
         padding: 36px 38px 28px 22px;
     }
     
+    .sidenav a{
+        margin: 55px 0;
+    }
+    
     #mobilemenu{
         max-width: 90%;
         padding-top: 35px;
@@ -782,11 +761,6 @@ img {
         width: 50px;
         float: left;
     }
-    
-    #number {
-        width: 150px;
-        margin: auto;
-}  
     
     #map{
         width: 286px;
@@ -861,12 +835,6 @@ img {
         font-size: 20px;
     }
     
-    #mobilemenu h2{
-        font-size: 28px;
-        margin: 5px auto 15px;
-    }
-    
-    
     h3{
         font-size: 20px;
         margin: auto;
@@ -894,41 +862,9 @@ img {
         filter: drop-shadow(2px 1px 1px #000);
     }
     
-    #hours{
-        margin-top: 10px;
-    }
-    
-    #hours h2{
-        margin-bottom: 5px;
-    }
-    
-    #hours h3{
-        margin-top: 0px;
-    }
-    
-    #location img{
-        width: 30px;
-    }
-    
-    #reservations h2{
-        margin: 15px;
-    }
-    
-    #reservations h3{
-        margin: 15px;
-    }
-    
-    #location h2{
-        margin: 10px;
-    }
-    
-    #location h3{
-        margin: 0px;
-    }
-    
     #form h2{
         font-size: 30px;
-        margin-top: 30px;
+        margin-top: 10px;
     }
     
     select{
@@ -945,10 +881,11 @@ img {
 
     #message{
         height: 100px;
+        background-color: #f5f5f0;
     }
     
     #fname{
-        margin-top: 5px;
+        margin-top: -25px;
     }
     
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -973,11 +910,11 @@ img {
         font-family: 'federant';
         font-size: 18px;
         color: #b00;
-        box-shadow: 2px 4px 10px #111109;
+        box-shadow: 2px 4px 10px #f5429e;
         text-align: center;
         width: 80%;
         padding: 5px; /* Some padding */  
-        border: 1.5px solid #999966; /* Gray border */
+        border: 2px solid #f5429e; /* Gray border */
         border-radius: 20px; /* Rounded borders */
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 25px; /* Add a top margin */
@@ -1028,7 +965,7 @@ img {
 
     #form {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: -50px;
     }
 
     footer{
@@ -1153,41 +1090,9 @@ img {
         margin: 18px 0;
     }
     
-    #hours{
-        flex: 3;
-        text-align: center;
-        max-width: 250px;
-        margin: 0 auto;
-    }
-    
-    #reservations{
-        flex: 2;
-        text-align: center;
-        max-width: 350px;
-        margin: 0px auto;
-    }
-    
-    #reservations h2{
-        margin-bottom: 30px;
-    }
-    
-    #location img{
-        width: 30px;
-    }
-    
-    #location{ 
-        text-align: center;
-        flex: 1;
-        max-width: 250px;
-        margin: 0 auto;
-    }
-    
-    #location h3{
-        margin: 5px;   
-    }
-    
     #number{
         margin-top: 30px;
+        width: 500px;
     }
     
     h1{
@@ -1202,24 +1107,6 @@ img {
         font-family: serif;
     }
     
-    #reservation{
-        color:#ffeecc;
-        padding: 10px 20px;
-        background: repeating-linear-gradient(to top, #500, #900, red 100%);
-        width: 100px;
-        border-radius: 30px;
-        font-family: 'Federant';
-        font-size: 20px;
-        text-decoration: none;
-        border: .5px solid #800;
-        box-shadow: 2px 4px 8px #700;
-    }
-    
-    #mobilemenu{
-        max-width: 75%;
-        margin: 20px auto;
-    }
-    
     
     textarea, input{
         font-family: 'federant', serif;
@@ -1227,13 +1114,13 @@ img {
         text-align: center;
         font-size: 18px;
         font-weight:bolder;
-        max-width: 450px;
+        max-width: 550px;
         background-color: #f5f5f0;
     }
 
     select{
         font-family: 'federant', serif;
-        color: #b00;
+        color: #f5429e;
         text-align: center;
         font-size: 18px;
         font-weight:bolder;
@@ -1244,6 +1131,7 @@ img {
 
     #message{
         height: 200px;
+        background-color: #f5f5f0;
     }
     
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -1264,10 +1152,10 @@ img {
         background-color: #f5f5f0;
         margin: auto;
         text-align: center;
-        box-shadow: 2px 4px 10px #111109;
+        box-shadow: 2px 4px 10px #f5429e;
         width: 90%; /* Full width */
         padding: 8px; /* Some padding */  
-        border: 1.5px solid #999966; /* Gray border */
+        border: 3px solid #f5429e; /* Gray border */
         border-radius: 25px; /* Rounded borders */
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 50px; /* Add a top margin */
@@ -1311,7 +1199,7 @@ img {
     }
     
     #fname{
-        margin-top: 130px;
+        margin-top: 100px;
     }
 
     /* Add a background color and some padding around the form */
