@@ -430,6 +430,18 @@ img {
     font-size: 50px;
 }
 
+.menu{
+    width: 100%;
+    text-align: center;
+    margin: 80px 0;
+}
+
+.menu img{
+    width: 80%;
+    margin: 0 auto;
+    border: 3px double #ff75d1;
+}
+
 
 /*=======================================*/
 /*=======================================*/
