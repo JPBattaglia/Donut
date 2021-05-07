@@ -103,7 +103,7 @@ html{
 
 
 .animated {
-        background-color: #12001a;
+        background-color: #25002e;
         background-position: left top;
         margin-bottom:30px;
         -webkit-animation-duration: 3s;animation-duration: 3s;
@@ -584,13 +584,19 @@ img {
         color: #fff;
         margin: 20px 0;
         padding: 8px;
-        background: repeating-linear-gradient(to top, #ff70e5, #ff26d7, #ba0098 100%);
+        background: repeating-linear-gradient(to top, #ba0098, #ff26d7, #ff70e5 100%);
         width: 140px;
         border-radius: 30px;
         font-family: 'Federant';
         font-size: 20px;
         text-decoration: none;
         border: .5px solid #fc40ff;
+        text-shadow:
+        1px 1px 0 #920094,
+        -1px -1px 0 #920094,  
+        1px -1px 0 #920094,
+        -1px 1px 0 #920094,
+        1px 1px 0 #920094;
         box-shadow: 
         2px 8px 10px black,
         -2px 8px 10px black;
@@ -605,12 +611,6 @@ img {
         box-shadow: 2px 8px 8px #ff00c8;
         color: antiquewhite;
         border: .5px solid #b000aa;
-        text-shadow:
-        1px 1px 0 #920094,
-        -1px -1px 0 #920094,  
-        1px -1px 0 #920094,
-        -1px 1px 0 #920094,
-        1px 1px 0 #920094;
         cursor: pointer;  
     }
     
@@ -905,13 +905,19 @@ img {
         color: #fff;
         margin: 20px 0;
         padding: 5px;
-        background: repeating-linear-gradient(to top, #ff70e5, #ff26d7, #ba0098 100%);
+        background: repeating-linear-gradient(to top, #ba0098, #ff26d7, #ff70e5 100%);
         width: 120px;
         border-radius: 30px;
         font-family: 'Federant';
         font-size: 20px;
         text-decoration: none;
         border: .5px solid #fc40ff;
+        text-shadow:
+        1px 1px 0 #920094,
+        -1px -1px 0 #920094,  
+        1px -1px 0 #920094,
+        -1px 1px 0 #920094,
+        1px 1px 0 #920094;
         box-shadow: 
         2px 8px 10px black,
         -2px 8px 10px black;
@@ -926,12 +932,6 @@ img {
         box-shadow: 2px 8px 8px #ff00c8;
         color: antiquewhite;
         border: .5px solid #b000aa;
-        text-shadow:
-        1px 1px 0 #920094,
-        -1px -1px 0 #920094,  
-        1px -1px 0 #920094,
-        -1px 1px 0 #920094,
-        1px 1px 0 #920094;
         cursor: pointer;  
     }
 
@@ -1151,13 +1151,19 @@ img {
         color: #fff;
         margin: 20px 0;
         padding: 8px;
-        background: repeating-linear-gradient(to top, #ff70e5, #ff26d7, #ba0098 100%);
+        background: repeating-linear-gradient(to top, #ba0098, #ff26d7, #ff70e5 100%);
         width: 140px;
         border-radius: 30px;
         font-family: 'Federant';
         font-size: 20px;
         text-decoration: none;
         border: .5px solid #fc40ff;
+        text-shadow:
+        1px 1px 0 #920094,
+        -1px -1px 0 #920094,  
+        1px -1px 0 #920094,
+        -1px 1px 0 #920094,
+        1px 1px 0 #920094;
         box-shadow: 
         2px 8px 10px black,
         -2px 8px 10px black;
@@ -1172,12 +1178,6 @@ img {
         box-shadow: 2px 8px 8px #ff00c8;
         color: antiquewhite;
         border: .5px solid #b000aa;
-        text-shadow:
-        1px 1px 0 #920094,
-        -1px -1px 0 #920094,  
-        1px -1px 0 #920094,
-        -1px 1px 0 #920094,
-        1px 1px 0 #920094;
         cursor: pointer;  
     }
     
