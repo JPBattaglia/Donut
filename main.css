@@ -409,7 +409,7 @@ img {
 #number {
     width: 200px;
     margin: auto;
-}  
+} 
 
 #form h2{
     font-size: 50px;
@@ -460,7 +460,6 @@ img {
         margin: 20px 0;
     }
     
-    
     p{
         color: #fff;
         font-size: 15px;
@@ -480,7 +479,7 @@ img {
     }
     
     #sociallink img{
-        width: 30px;
+        width: 45px;
         margin: 0px 20px;
         filter: drop-shadow(2px 1px 1px #000);
     }
@@ -491,7 +490,7 @@ img {
     
     #intro{
         margin: auto;
-        height: 450px;
+        height: 500px;
         max-width: 700px;
     }
     
@@ -643,6 +642,7 @@ img {
         width: 100%;
         font-weight: bolder;
         color: #ff6ed1;
+        font-size: 22px;
     }
 
     .logo{
@@ -678,6 +678,19 @@ img {
         top: 40px;
     }
     
+    #map{
+        width: 486px;
+        height: 308px;
+        margin: 50px auto;
+        border: 4px double #ff3ddb;
+        border-radius: 12px;
+    }
+    
+    iframe{
+        width: 478px;
+        height: 300px;
+        border-radius: 8px;
+    }  
 }
 
 /*=======================================*/
@@ -741,16 +754,16 @@ img {
     }
     
     #map{
-        width: 286px;
-        height: 108px;
+        width: 266px;
+        height: 133px;
         margin: 50px auto;
         border: 4px double #ff3ddb;
         border-radius: 12px;
     }
     
     iframe{
-        width: 278px;
-        height: 100px;
+        width: 258px;
+        height: 125px;
         border-radius: 8px;
     }
     
@@ -802,7 +815,7 @@ img {
     
     #menumade {
         padding: 10px 0;
-        width: 65px;
+        width: 55px;
     }
     
     #map{
@@ -835,7 +848,7 @@ img {
     }
     
     #sociallink img{
-        width: 25px;
+        width: 35px;
         margin: 0px 10px;
         filter: drop-shadow(2px 1px 1px #000);
     }
@@ -985,7 +998,7 @@ img {
     
     .lotto img{
         width: 100px;
-        margin-bottom: 50px;
+        margin: 0px 0 50px;
     }
     
     .menu{
@@ -1049,13 +1062,13 @@ img {
     }
     
     #sociallink img{
-        width: 40px;
-        margin: 0px 50px;
+        width: 50px;
+        margin: 0px 30px;
         filter: drop-shadow(2px 1px 1px #000);
     }
     
     #sociallink:hover{
-        filter: drop-shadow(-2px -1px 3px #0e0);
+        filter: drop-shadow(-2px -1px 3px #f5429e);
     }
     
     #intro img{
@@ -1199,6 +1212,7 @@ img {
         padding:20px 0px 40px;
         text-align: center;
     }
+    
 
     footer{
         margin-top: 100px;
