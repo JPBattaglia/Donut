@@ -717,8 +717,7 @@ img {
         border: 8px double black;
         border-radius: 14px;
         background:  url(Navbar.png);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
+        background-size: 125% 125%;
     }
     
      h4{
