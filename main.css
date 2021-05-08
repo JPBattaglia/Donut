@@ -301,7 +301,7 @@ nav{
     width: 99%;
     height: 165px;
     background:  url(Navbar.png);
-    background-size: 75% 100%;
+    background-size: 105% 100%;
     border: 10px double black;
     border-radius: 20px;
     text-align: center;
@@ -717,7 +717,7 @@ img {
         border: 8px double black;
         border-radius: 14px;
         background:  url(Navbar.png);
-        background-size: 125% 125%;
+        background-size: 105% 105%;
     }
     
      h4{
