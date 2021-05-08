@@ -301,7 +301,7 @@ nav{
     width: 99%;
     height: 165px;
     background:  url(Navbar.png);
-    background-size: 50% 100%;
+    background-size: 75% 100%;
     border: 10px double black;
     border-radius: 20px;
     text-align: center;
@@ -657,6 +657,7 @@ img {
         height: 110px;
         border: 8px double black;
         border-radius: 15px;
+        background-size: 100% 100%;
     }
     
     .navicon{
@@ -715,6 +716,9 @@ img {
         height: 100px;
         border: 8px double black;
         border-radius: 14px;
+        background:  url(Navbar.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
     }
     
      h4{
