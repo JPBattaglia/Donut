@@ -429,17 +429,17 @@ img {
 .center{
     width: 80%;
     margin: 0 auto;
-    border: 5px double #ff75d1;
+    border: 8px double #ff75d1;
 }
 
 .top{
-    border: 5px double #ff75d1;
+    border: 8px double #ff75d1;
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
 }
 
 .bottom{
-    border: 5px double #ff75d1;
+    border: 8px double #ff75d1;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
 }
@@ -708,6 +708,10 @@ img {
     
     .menu img{
         width: 90%;
+    }
+    
+    .top, .center, .bottom{
+        border: 5px double #ff75d1;
     }
     
     .top{
