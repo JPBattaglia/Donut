@@ -519,10 +519,6 @@ img {
         border-radius: 20px;
     }
     
-    .menus{
-        margin: 5px;
-    }
-    
     
     textarea, input{
         font-family: 'federant', serif;
@@ -691,7 +687,11 @@ img {
         width: 478px;
         height: 300px;
         border-radius: 8px;
-    }  
+    }
+    
+    .menu img{
+        width: 90%;
+    }
 }
 
 /*=======================================*/
