@@ -301,7 +301,7 @@ nav{
     width: 99%;
     height: 165px;
     background:  url(Navbar.png);
-    background-size: 105% 100%;
+    background-size: 80% 100%;
     border: 10px double black;
     border-radius: 20px;
     text-align: center;
