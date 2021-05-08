@@ -454,13 +454,49 @@ img {
     width: 200px;
 }
 
+.desknav{
+    float: right;
+    color: #fff;
+    text-shadow:
+       -1px -1px 0 #fc32a4,  
+       1px 1px 0 #fc32a4;
+    font-size: 20px;
+    margin: 50px;
+}
+
+.desktop a{
+    text-transform: uppercase;
+    transition: 1s;
+    margin: 20px;
+    text-decoration: none;
+    background: #17001c;
+    padding: 8px 30px;
+    border: 7px solid #ff80e1;
+    border-radius: 20px;  
+}
+
+.desktop a:hover{
+    transition: 1s;
+    border: 7px solid #d100a0;
+}
 
 /*=======================================*/
 /*=======================================*/
 
 @media (max-width: 1000px) and (min-width: 701px){
-     #rotate, .mobile{
+     #rotate, .mobile, .navicon{
         display: none;
+    }
+    
+    .desknav{
+        margin: 30px 0;
+        padding: 0px;
+    }
+    
+    .desktop a{
+        font-size: 18px;
+        padding: 5px 15px;
+        border-radius: 15px;
     }
     
     .sidenav .closebtn {
@@ -596,7 +632,7 @@ img {
         color: #fff;
         margin: 20px 0;
         padding: 8px;
-        background: repeating-linear-gradient(to top, #ba0098, #ff26d7, #ff70e5 100%);
+        background: repeating-linear-gradient(to top, #80007d, #b800b3, #ff3dfb 100%);
         width: 140px;
         border-radius: 30px;
         font-family: 'Federant';
@@ -952,7 +988,7 @@ img {
         color: #fff;
         margin: 20px 0;
         padding: 5px;
-        background: repeating-linear-gradient(to top, #ba0098, #ff26d7, #ff70e5 100%);
+        background: repeating-linear-gradient(to top, #80007d, #b800b3, #ff3dfb 100%);
         width: 120px;
         border-radius: 30px;
         font-family: 'Federant';
@@ -1105,7 +1141,7 @@ img {
 /*=======================================*/
 
 @media (min-width: 1000px){
-     #rotate, .navicon1, .mobile{
+     #rotate, .navicon, .mobile{
         display: none;
     }
     
@@ -1212,7 +1248,7 @@ img {
         color: #fff;
         margin: 20px 0;
         padding: 8px;
-        background: repeating-linear-gradient(to top, #ba0098, #ff26d7, #ff70e5 100%);
+        background: repeating-linear-gradient(to top, #80007d, #b800b3, #ff3dfb 100%);
         width: 140px;
         border-radius: 30px;
         font-family: 'Federant';
