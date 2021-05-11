@@ -809,19 +809,14 @@ img {
     }
     
     .sidenav a{
-        margin: 55px 0;
-        font-size: 22px;
+        margin: 40% 0;
+        font-size: 25px;
     }
     
     .navicon {
         width: 35px;
         height: 28px;
         margin: 12px 5px 0px 0px;
-    }
-    
-    #rotate{
-        width: 50px;
-        float: left;
     }
     
     #map{
@@ -839,14 +834,9 @@ img {
     }
     
     #stage{
-        margin: 2px 0px;
-        max-width: 315px;
-    }
-    
-    #intro{
-        margin: 10px auto;
-        height: 200px;
-        max-width: 315px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
     }
     
    h1{
@@ -862,9 +852,9 @@ img {
     
     
     #intro img{
+        width: 85vw;
+        height: 220px;
         margin: 25px auto 0;
-        max-width: 315px;
-        height: 180px;
         border-radius: 10px;
         border: 4px double #ff3ddb;
     }
@@ -891,6 +881,10 @@ img {
     
     #map{
         margin: 30px auto 40px;
+    }
+    
+    .mobile{
+        margin-top: -330px;
     }
 
     h2{
