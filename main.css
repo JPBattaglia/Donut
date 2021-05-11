@@ -242,9 +242,9 @@ p{
     z-index: 1;
     top: 0;
     right: 0;
-    background: url(Sprinkles.jpeg);
-    background-repeat: repeat;
-    background-size: 100% 25%;
+    background: url(SlideOutMenuDDC.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     overflow-x: hidden;
     transition: .8s;
     padding-top: 150px;
@@ -599,27 +599,27 @@ img {
     }
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: #c00;
-        opacity: .5; /* Firefox */
+        color: #f5429e;
+        opacity: 1; /* Firefox */
     }
 
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: red;
+        color: #f5429e;
     }
 
     ::-ms-input-placeholder { /* Microsoft Edge */
-        color: red;
+        color: #f5429e;
     }
 
     /* Style inputs with type="text", select elements and textareas */
     input[type=text], select, textarea {
         background-color: #eaddf0;
         margin: auto;
-        box-shadow: 2px 4px 10px #f5429e;
+        box-shadow: 2px 4px 10px #ff00e9;
         text-align: center;
         width: 60%; /* Full width */
         padding: 8px; /* Some padding */  
-        border: 3px solid #f5429e; /* Gray border */
+        border: 5px double #f5429e; /* Gray border */
         border-radius: 25px; /* Rounded borders */
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 30px; /* Add a top margin */
@@ -638,7 +638,7 @@ img {
         font-family: 'Federant';
         font-size: 20px;
         text-decoration: none;
-        border: .5px solid #fc40ff;
+        border: .5px solid #ff73f3;
         text-shadow:
         1px 1px 0 #920094,
         -1px -1px 0 #920094,  
@@ -658,7 +658,7 @@ img {
     input[type=submit]:hover {
         box-shadow: 2px 8px 8px #ff00c8;
         color: antiquewhite;
-        border: .5px solid #b000aa;
+        border: .5px solid #ff73f3;
         cursor: pointer;  
     }
     
@@ -810,6 +810,7 @@ img {
     
     .sidenav a{
         margin: 55px 0;
+        font-size: 22px;
     }
     
     .navicon {
@@ -925,13 +926,13 @@ img {
     
     #form h2{
         font-size: 30px;
-        margin-top: 10px;
+        margin: 10px 0 25px;
     }
     
     select{
         padding: 0px;
         font-family: 'federant', serif;
-        color:red;
+        color: #f5429e;
         text-align: center;
         font-size: 18px;
         font-weight:bolder;
@@ -950,8 +951,8 @@ img {
     }
     
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: #b00;
-        opacity: .5; /* Firefox */
+        color: #f5429e;
+        opacity: 1; /* Firefox */
         font-family: 'federant';
         font-size: 17px;
     }
@@ -970,12 +971,12 @@ img {
         margin: auto;
         font-family: 'federant';
         font-size: 18px;
-        color: #b00;
-        box-shadow: 2px 4px 10px #f5429e;
+        color: #f5429e;
+        box-shadow: 2px 4px 10px #ff00e9;
         text-align: center;
         width: 80%;
-        padding: 5px; /* Some padding */  
-        border: 2px solid #f5429e; /* Gray border */
+        padding: 3px; /* Some padding */  
+        border: 4px double #f5429e; /* Gray border */
         border-radius: 20px; /* Rounded borders */
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 25px; /* Add a top margin */
@@ -994,7 +995,7 @@ img {
         font-family: 'Federant';
         font-size: 20px;
         text-decoration: none;
-        border: .5px solid #fc40ff;
+        border: .5px solid #ff73f3;
         text-shadow:
         1px 1px 0 #920094,
         -1px -1px 0 #920094,  
@@ -1014,7 +1015,7 @@ img {
     input[type=submit]:hover {
         box-shadow: 2px 8px 8px #ff00c8;
         color: antiquewhite;
-        border: .5px solid #b000aa;
+        border: .5px solid #ff73f3;
         cursor: pointer;  
     }
 
@@ -1035,13 +1036,13 @@ img {
     }
     
     .top{
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
     
     .bottom{
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
     footer{
@@ -1232,10 +1233,10 @@ img {
         background-color: #eaddf0;
         margin: auto;
         text-align: center;
-        box-shadow: 2px 4px 10px #f5429e;
+        box-shadow: 2px 4px 10px #ff00e9;
         width: 90%; /* Full width */
         padding: 8px; /* Some padding */  
-        border: 3px solid #f5429e; /* Gray border */
+        border: 5px double #f5429e; /* Gray border */
         border-radius: 25px; /* Rounded borders */
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 50px; /* Add a top margin */
@@ -1254,7 +1255,7 @@ img {
         font-family: 'Federant';
         font-size: 20px;
         text-decoration: none;
-        border: .5px solid #fc40ff;
+        border: .5px solid #ff73f3;
         text-shadow:
         1px 1px 0 #920094,
         -1px -1px 0 #920094,  
@@ -1274,7 +1275,7 @@ img {
     input[type=submit]:hover {
         box-shadow: 2px 8px 8px #ff00c8;
         color: antiquewhite;
-        border: .5px solid #b000aa;
+        border: .5px solid #ff73f3;
         cursor: pointer;  
     }
     
