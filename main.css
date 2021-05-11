@@ -615,7 +615,6 @@ img {
     input[type=text], select, textarea {
         background-color: #eaddf0;
         margin: auto;
-        box-shadow: 2px 4px 10px #ff00e9;
         text-align: center;
         width: 60%; /* Full width */
         padding: 8px; /* Some padding */  
@@ -854,7 +853,7 @@ img {
     #intro img{
         width: 85vw;
         height: 220px;
-        margin: 25px auto 0;
+        margin: 35px auto 0;
         border-radius: 10px;
         border: 4px double #ff3ddb;
     }
@@ -884,7 +883,7 @@ img {
     }
     
     .mobile{
-        margin-top: -330px;
+        margin-top: -300px;
     }
 
     h2{
@@ -966,11 +965,10 @@ img {
         font-family: 'federant';
         font-size: 18px;
         color: #f5429e;
-        box-shadow: 2px 4px 10px #ff00e9;
         text-align: center;
         width: 80%;
-        padding: 3px; /* Some padding */  
-        border: 4px double #f5429e; /* Gray border */
+        padding: 4px; /* Some padding */  
+        border: 4.5px double #f5429e; /* Gray border */
         border-radius: 20px; /* Rounded borders */
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 25px; /* Add a top margin */
@@ -1227,7 +1225,6 @@ img {
         background-color: #eaddf0;
         margin: auto;
         text-align: center;
-        box-shadow: 2px 4px 10px #ff00e9;
         width: 90%; /* Full width */
         padding: 8px; /* Some padding */  
         border: 5px double #f5429e; /* Gray border */
