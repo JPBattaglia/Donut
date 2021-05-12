@@ -247,7 +247,7 @@ p{
     background-size: 100% 100%;
     overflow-x: hidden;
     transition: .8s;
-    padding-top: 150px;
+    padding-top: 125px;
     font-family: 'Quintessential';
     font-weight: bold;
 }
@@ -489,14 +489,15 @@ img {
     }
     
     .desknav{
-        margin: 30px 0;
+        margin: 25px 0;
         padding: 0px;
     }
     
     .desktop a{
-        font-size: 18px;
+        font-size: 14px;
         padding: 5px 15px;
         border-radius: 15px;
+        margin: 30px 12px;
     }
     
     .sidenav .closebtn {
@@ -757,6 +758,24 @@ img {
     .bottom{
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
+    }
+    
+    .gallery{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .gallery img{
+        width: 300px;
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+        border: 5px double #ff73f3;
+        border-radius: 10px;
     }
 }
 
@@ -1085,6 +1104,24 @@ img {
     .menu img{
         width: 90%;
     }
+    
+    .gallery{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .gallery img{
+        width: 300px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+        border: 5px double #ff73f3;
+        border-radius: 10px;
+    }
 }
 
 
@@ -1127,6 +1164,30 @@ img {
     
     .close{
         right: 240px;
+    }
+    
+    .gallery{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .gallery img{
+        width: 300px;
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+        border: 5px double #ff73f3;
+        border-radius: 10px;
+    }
+    
+    .desknav a{
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 0 15px;
     }
 }
 
@@ -1287,6 +1348,24 @@ img {
     #form {
         padding:20px 0px 40px;
         text-align: center;
+    }
+    
+    .gallery{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .gallery img{
+        width: 300px;
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+        border: 5px double #ff73f3;
+        border-radius: 10px;
     }
     
 
