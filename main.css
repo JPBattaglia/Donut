@@ -590,7 +590,7 @@ img {
 
     select{
         font-family: 'federant', serif;
-        color: #f5429e;
+        color: #c90082;
         text-align: center;
         font-size: 18px;
         font-weight: bolder;
@@ -600,7 +600,7 @@ img {
     }
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: #f5429e;
+        color: #c90082;
         opacity: 1; /* Firefox */
     }
 
@@ -614,7 +614,7 @@ img {
 
     /* Style inputs with type="text", select elements and textareas */
     input[type=text], select, textarea {
-        background-color: #eaddf0;
+        background-color: #ffd6f0;
         margin: auto;
         text-align: center;
         width: 60%; /* Full width */
@@ -944,18 +944,18 @@ img {
     select{
         padding: 0px;
         font-family: 'federant', serif;
-        color: #f5429e;
+        color: #c90082;
         text-align: center;
         font-size: 18px;
         font-weight:bolder;
         max-width: 50%;
         box-sizing: border-box;
-        background-color: #d4c3db;
+        background-color: #ffc7eb;
     }
 
     #message{
         height: 100px;
-        background-color: #eaddf0;
+        background-color: #ffd6f0;
     }
     
     #fname{
@@ -963,7 +963,7 @@ img {
     }
     
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: #f5429e;
+        color: #c90082;
         opacity: 1; /* Firefox */
         font-family: 'federant';
         font-size: 17px;
@@ -979,11 +979,11 @@ img {
 
     /* Style inputs with type="text", select elements and textareas */
     input[type=text], select, textarea {
-        background-color: #eaddf0;
+        background-color: #ffd6f0;
         margin: auto;
         font-family: 'federant';
         font-size: 18px;
-        color: #f5429e;
+        color: #c90082;
         text-align: center;
         width: 80%;
         padding: 4px; /* Some padding */  
@@ -1244,37 +1244,37 @@ img {
     
     textarea, input{
         font-family: 'federant', serif;
-        color:red;
+        color: red;
         text-align: center;
         font-size: 18px;
         font-weight:bolder;
         max-width: 550px;
-        background-color: #eaddf0;
+        background-color: #ffc7eb;
     }
 
     select{
         font-family: 'federant', serif;
-        color: #f5429e;
+        color: #c90082;
         text-align: center;
         font-size: 18px;
         font-weight:bolder;
         max-width: 30%;
         box-sizing: border-box;
-        background-color: #eaddf0;
+        background-color: #ffc7eb;
     }
 
     #message{
         height: 200px;
-        background-color: #eaddf0;
+        background-color: #ffc7eb;
     }
     
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: #b00;
-        opacity: .5; /* Firefox */
+        color: #c90082;
+        opacity: 1; /* Firefox */
     }
 
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: red;
+        color: #c90082;
     }
 
     ::-ms-input-placeholder { /* Microsoft Edge */
@@ -1283,7 +1283,7 @@ img {
 
     /* Style inputs with type="text", select elements and textareas */
     input[type=text], select, textarea {
-        background-color: #eaddf0;
+        background-color: #ffd6f0;
         margin: auto;
         text-align: center;
         width: 90%; /* Full width */
