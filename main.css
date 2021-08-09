@@ -311,12 +311,6 @@ nav img{
     float:left;
 }
 
-nav p{
-    color: white;
-    font-family: 'Quintessential';
-    float:right;
-    margin-top: 30px;
-}
 
 #call{
     width: 150px;
@@ -458,9 +452,6 @@ img {
 .desknav{
     float: right;
     color: #fff;
-    text-shadow:
-       -1px -1px 0 #fc32a4,  
-       1px 1px 0 #fc32a4;
     font-size: 20px;
     margin: 50px;
 }
@@ -479,6 +470,8 @@ img {
 .desktop a:hover{
     transition: 1s;
     border: 7px solid #d100a0;
+    text-shadow: .5px .5px 0px #fff, -.5px -.5px 0px #fff, -.5px .5px 0px #fff, .5px -.5px 0px #fff;
+        
 }
 
 /*=======================================*/
