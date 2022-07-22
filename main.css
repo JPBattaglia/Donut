@@ -299,6 +299,7 @@ nav{
     margin: 30px auto;
     margin-bottom: 10px;
     width: 99%;
+    max-width: 1400px;
     height: 150px;
     background: linear-gradient(to top, #ff75d1, #d100a0, #ff75d1);
     background-size: 100% 5%;
@@ -366,7 +367,7 @@ img {
   #stage img:nth-of-type(1) {
     animation-name: fader;
     animation-delay: 3s;
-    animation-duration: 2s;
+    animation-duration: 5s;
     z-index: 20;
   }
   #stage img:nth-of-type(2) {
@@ -470,8 +471,13 @@ img {
 .desktop a:hover{
     transition: 1s;
     border: 7px solid #d100a0;
-    text-shadow: .5px .5px 0px #fff, -.5px -.5px 0px #fff, -.5px .5px 0px #fff, .5px -.5px 0px #fff;
-        
+    text-shadow: .5px .5px 0px #fff, -.5px -.5px 0px #fff, -.5px .5px 0px #fff, .5px -.5px 0px #fff;     
+}
+
+.gallery{
+    width: 80%;
+    max-width: 1400px;
+    margin: auto;
 }
 
 /*=======================================*/
