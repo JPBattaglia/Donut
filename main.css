@@ -491,6 +491,22 @@ img {
     margin: auto;
 }
 
+#preloader{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #f7f;
+        padding-top: 30%;
+        font-family: 'federant' ;
+        background: #404 url(Preloader.gif) no-repeat center center;
+        background-size: 15%;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 9999999999999999;
+        top: 0;
+    }
+
 /*=======================================*/
 /*=======================================*/
 
