@@ -496,10 +496,10 @@ img {
         align-items: center;
         justify-content: center;
         color: #f7f;
-        padding-top: 30%;
+        padding-top: 20%;
         font-family: 'federant' ;
         background: #404 url(Preloader.gif) no-repeat center center;
-        background-size: 15%;
+        background-size: 10%;
         height: 100%;
         width: 100%;
         position: fixed;
