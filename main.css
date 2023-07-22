@@ -941,8 +941,17 @@ img {
     .mobile{
         margin-top: -300px;
     }
+    
+    #address{
+        margin: 30px auto;
+    }
+    
+    #hours{
+        margin: 60px auto;
+    }
 
     h2{
+        margin: 20px auto;
         font-size: 22px;
     }
     
