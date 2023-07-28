@@ -150,11 +150,11 @@ h4:hover{
     }
 
 h3:hover{
-    transition: 1s;
     font-weight: bolder;
-    color: #fff;
+    color: #f700d6;
     text-shadow:
-       2px 1px 0 #fc32a4;
+       2px 2px 0 #fff;
+    transition: 1s;
 }
 
 #menumade {
@@ -176,7 +176,6 @@ h2{
 }
 
 h3{
-    transition: 1s;
     font-size: 32px;
     width: 250px;
     font-family: 'Quintessential', serif;
@@ -187,7 +186,7 @@ h3{
     text-shadow:
        -1px -1px 0 #fc32a4,  
        1px 1px 0 #fc32a4;
-    
+    transition: 1s;
 }
 
 h4{
