@@ -624,18 +624,25 @@ img {
         box-sizing: border-box;
         background-color: #eaddf0;
     }
+    
+    select:focus{
+        background-color: #eaddf0;
+    }
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: #c90082;
+        background-color: #eaddf0;
         opacity: 1; /* Firefox */
     }
 
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
         color: #f5429e;
+        background-color: #eaddf0;
     }
 
     ::-ms-input-placeholder { /* Microsoft Edge */
         color: #f5429e;
+        background-color: #eaddf0;
     }
 
     /* Style inputs with type="text", select elements and textareas */
@@ -646,7 +653,7 @@ img {
         width: 60%; /* Full width */
         padding: 8px; /* Some padding */  
         border: 5px double #f5429e; /* Gray border */
-        border-radius: 25px; /* Rounded borders */
+        border-radius: 20px; /* Rounded borders */
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 30px; /* Add a top margin */
         margin-bottom: 30px; /* Bottom margin */
@@ -660,7 +667,7 @@ img {
         padding: 8px;
         background: repeating-linear-gradient(to top, #80007d, #b800b3, #ff3dfb 100%);
         width: 140px;
-        border-radius: 30px;
+        border-radius: 15px;
         font-family: 'Federant';
         font-size: 20px;
         text-decoration: none;
@@ -997,6 +1004,10 @@ img {
         box-sizing: border-box;
         background-color: #ffc7eb;
     }
+    
+    select:focus{
+        background-color: #eaddf0;
+    }
 
     #message{
         height: 100px;
@@ -1033,7 +1044,7 @@ img {
         width: 80%;
         padding: 4px; /* Some padding */  
         border: 4.5px double #f5429e; /* Gray border */
-        border-radius: 20px; /* Rounded borders */
+        border-radius: 15px; /* Rounded borders */
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 25px; /* Add a top margin */
         margin-bottom: 10px; /* Bottom margin */
@@ -1047,7 +1058,7 @@ img {
         padding: 5px;
         background: repeating-linear-gradient(to top, #80007d, #b800b3, #ff3dfb 100%);
         width: 120px;
-        border-radius: 30px;
+        border-radius: 15px;
         font-family: 'Federant';
         font-size: 20px;
         text-decoration: none;
@@ -1307,6 +1318,10 @@ img {
         box-sizing: border-box;
         background-color: #ffc7eb;
     }
+    
+    select:focus{
+        background-color: #eaddf0;
+    }
 
     #message{
         height: 200px;
@@ -1334,7 +1349,7 @@ img {
         width: 90%; /* Full width */
         padding: 8px; /* Some padding */  
         border: 5px double #f5429e; /* Gray border */
-        border-radius: 25px; /* Rounded borders */
+        border-radius: 20px; /* Rounded borders */
         box-sizing: border-box; /* Make sure that padding and width stays in place */
         margin-top: 50px; /* Add a top margin */
         margin-bottom: 30px; /* Bottom margin */
@@ -1348,7 +1363,7 @@ img {
         padding: 8px;
         background: repeating-linear-gradient(to top, #80007d, #b800b3, #ff3dfb 100%);
         width: 140px;
-        border-radius: 30px;
+        border-radius: 15px;
         font-family: 'Federant';
         font-size: 20px;
         text-decoration: none;
