@@ -151,9 +151,10 @@ h4:hover{
 
 h3:hover{
     font-weight: bolder;
-    color: #f700d6;
+    color: #00ff00;
     text-shadow:
-       2px 2px 0 #fff;
+       -0px -1px 0px #ff4dd2,  
+       1px 1px 0px #ff4dd2;
     transition: 1s;
 }
 
@@ -176,16 +177,15 @@ h2{
 }
 
 h3{
-    font-size: 32px;
+    font-size: 36px;
     width: 250px;
     font-family: 'Quintessential', serif;
     font-weight: bolder;
     text-align: center;
     margin: 20px auto;
-    color: #fff;
+    color: #ff4dd2;
     text-shadow:
-       -1px -1px 0 #fc32a4,  
-       1px 1px 0 #fc32a4;
+       -1px -1px 0 #fff;
     transition: 1s;
 }
 
