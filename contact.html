@@ -1,161 +1,429 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Happy Donut - Contact</title>
+    <meta name="description" content="Contact My Happy Donut for general questions, large orders, catering, lotto, billing, and more.">
 
-<html>
-    <head>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    
-        <meta property="og:title" content="My Happy Donut" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="400" />
-        <meta property="og:image:height" content="300" />
-        <meta property="og:image" content="https://i.ibb.co/k8GpLrp/logo2.jpg" />
-	    <meta property="og:image:secure_url" content="https://i.ibb.co/k8GpLrp/logo2.jpg" />
-        <meta name="keywords" content="Restaurant Diner Donuts Breakfast Coffee">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>MY HAPPY DONUT - Contact</title>
-        <meta name="description" content="24 Hour Donut Coffee And Breakfast Cafe">
-        <link rel="stylesheet" href="main.css">
-        <link rel="shortcut icon" type="image/png" href="PinkDonut.png">
-        <link href="https://fonts.googleapis.com/css?family=Federant|Tauri|Kaushan+Script|Rammetto+One|Righteous|Poetsen+One|Kanit|Quintessential" rel="stylesheet"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-197643214-1">
-        </script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="PinkDonut.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="parallax.js" defer></script>
 
-          gtag('config', 'UA-197643214-1');
-        </script>
-        
-    </head>
+    <link rel="stylesheet" href="mm-a11y.css">
+    <script src="mm-a11y.js" defer></script>
     
-    <body id="animated-example" class="animated fadeOut">
-        
-        <div id="preloader">Loading . . .</div>
-        <script>window.addEventListener("beforeunload", function () {
-  document.body.classList.add("animate-out");
-            });</script>
-
-        
-        <nav>
- 
-            
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9747;</a>
-                <a href="index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="gallery.html">Gallery</a>
-                <a style= "text-decoration: underline; text-underline-position: under;" href="contact.html">Contact</a>
-            </div>
-
-            <span data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" style="float:right;margin-top: 10px;cursor:pointer" onclick="openNav()">
-            <img class=navicon src="BurgerLogo.png">
-            </span>
-
-        <script>
-            
-            
-            
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "175px";
+    <style>
+        .contact-page{
+            padding:34px 20px 24px;
         }
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
+        .contact-hero{
+            max-width:1140px;
+            margin:0 auto 24px;
+            background:linear-gradient(180deg, rgba(108, 43, 87, 0.96), rgba(48, 3, 58, 0.95));
+            border:1px solid var(--border);
+            border-radius:26px;
+            overflow:hidden;
+            box-shadow:var(--shadow);
         }
-        </script>
 
-            <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"><a href="#openModal99"><img class="logo" src="logo1.png"></a></div>
-        
-                <div id="openModal99" class="modalDialog">
-                <div>
-                    <h5>This location was opened in 1995 and has been family owned and operated for 25 years. Starting off as a small donut shop, we have grown throughout the years and serve a various selection of donuts, Pastry’s, Bagels, Sandwiches and Breakfast dishes. Right in the center of Chinatown, Little Italy and the Financial district, come by and join us for one of our most popular donuts – The Apple Fritter – or if you have a bigger appetite, the All-American Breakfast.
-                        Come visit us in the historic San Francisco Chinatown district. We are located right across the street from Columbus Tower (The Sentinal Building), a block away from Transamerica Pyramid, a block away from Hilton Financial District, in walking distance of the Dragon’s Gate (Chinatown entrance). Union Square shopping district, North Beach Little Italy, Coit Tower and a bike ride away from Ghirardelli Square and Pier 39 in Fisherman’s Wharf.</h5>
+        .contact-hero-image{
+            width:100%;
+            height:320px;
+            object-fit:cover;
+            object-position:center;
+            border-bottom:1px solid var(--border);
+        }
 
-		          <a href="#close" title="Close" class="close">&#9747;</a>
-                </div></div>
-            
-            <div class="desktop">
-                
-                <section data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" class="desknav">
-                    <a href="index.html">Home</a>
-                    <a href="menu.html">Menu</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a style="text-shadow: 1px 1px 0px #fff, -1px -1px 0px #fff, -1px 1px 0px #fff, 1px -1px 0px #fff;color: #70006B;" href="contact.html">Contact</a>
-                </section>
-            
-            </div>
-                    
+        .contact-hero-copy{
+            padding:34px 30px 38px;
+            text-align:center;
+        }
+
+        .contact-hero-copy h1{
+            max-width:920px;
+            margin:0 auto 16px;
+            font-family:'Cherry Cream Soda', cursive;
+            font-size:54px;
+            line-height:1.04;
+            letter-spacing:0.3px;
+            color:#fff4fb;
+        }
+
+        .contact-hero-copy p{
+            max-width:760px;
+            margin:0 auto 24px;
+            font-size:17px;
+            color:var(--muted);
+        }
+
+        .contact-callout-row{
+            display:flex;
+            justify-content:center;
+            gap:14px;
+            flex-wrap:wrap;
+            margin-top:18px;
+        }
+
+        .contact-callout{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            padding:12px 20px;
+            border-radius:999px;
+            text-decoration:none;
+            font-weight:700;
+            font-size:15px;
+            color:var(--text);
+            background:rgba(255,155,211,0.08);
+            border:1px solid var(--border);
+            transition:transform 0.18s ease, opacity 0.18s ease;
+        }
+
+        .contact-callout:hover{
+            transform:translateY(-1px);
+            opacity:0.96;
+        }
+
+        .contact-content{
+            max-width:1140px;
+            margin:0 auto 28px;
+            display:grid;
+            grid-template-columns:1.15fr 0.85fr;
+            gap:22px;
+        }
+
+        .contact-panel,
+        .contact-info-panel{
+            background:linear-gradient(180deg, rgba(108, 43, 87, 0.96), rgba(48, 3, 58, 0.95));
+            border:1px solid var(--border);
+            border-radius:26px;
+            padding:26px;
+            box-shadow:var(--shadow);
+        }
+
+        .contact-panel-header,
+        .contact-info-header{
+            text-align:center;
+            margin-bottom:22px;
+        }
+
+        .contact-kicker{
+            margin-bottom:10px;
+            color:var(--pink-soft);
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:1.8px;
+            text-transform:uppercase;
+        }
+
+        .contact-panel-header h2,
+        .contact-info-header h2{
+            margin:0 0 10px;
+            font-family:'Cherry Cream Soda', cursive;
+            font-size:38px;
+            line-height:1.08;
+            color:#fff4fb;
+        }
+
+        .contact-panel-header p,
+        .contact-info-header p{
+            max-width:680px;
+            margin:0 auto;
+            color:var(--muted);
+            font-size:16px;
+        }
+
+        .contact-form{
+            display:grid;
+            gap:16px;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea{
+            width:100%;
+            border:1px solid var(--border);
+            border-radius:18px;
+            background:rgba(18, 0, 20, 0.45);
+            color:var(--text);
+            font-family:'Inter', sans-serif;
+            font-size:16px;
+            padding:16px 18px;
+            outline:none;
+            box-shadow:none;
+            transition:border-color 0.18s ease, background 0.18s ease;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder{
+            color:#c79ebd;
+            opacity:1;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus{
+            border-color:var(--pink-soft);
+            background:rgba(18, 0, 20, 0.58);
+        }
+
+        .contact-form textarea{
+            min-height:180px;
+            resize:vertical;
+        }
+
+        .contact-form select{
+            appearance:none;
+            -webkit-appearance:none;
+            -moz-appearance:none;
+            cursor:pointer;
+        }
+
+        .contact-submit{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            min-width:190px;
+            padding:14px 22px;
+            border-radius:999px;
+            text-decoration:none;
+            font-weight:700;
+            font-size:15px;
+            transition:transform 0.18s ease, opacity 0.18s ease, border-color 0.18s ease;
+            background:linear-gradient(180deg, var(--pink-soft), var(--pink));
+            color:#23031f;
+            box-shadow:0 10px 24px rgba(244,91,180,0.24);
+            border:none;
+            cursor:pointer;
+            justify-self:center;
+            margin-top:4px;
+        }
+
+        .contact-submit:hover{
+            transform:translateY(-1px);
+            opacity:0.96;
+        }
+
+        .contact-info-list{
+            display:grid;
+            gap:16px;
+        }
+
+        .contact-info-item{
+            background:rgba(18, 0, 20, 0.35);
+            border:1px solid var(--border);
+            border-radius:20px;
+            padding:20px 18px;
+            text-align:center;
+        }
+
+        .contact-info-item h3{
+            margin:0 0 8px;
+            font-size:13px;
+            font-weight:700;
+            letter-spacing:1.3px;
+            text-transform:uppercase;
+            color:var(--pink-soft);
+            width:auto;
+            font-family:'Inter', sans-serif;
+            text-shadow:none;
+        }
+
+        .contact-info-item p{
+            width:auto;
+            margin:0;
+            color:var(--text);
+            font-size:16px;
+            font-family:'Inter', sans-serif;
+            text-align:center;
+        }
+
+        .contact-info-item a{
+            text-decoration:none;
+        }
+
+        @media (max-width: 980px){
+            .contact-content{
+                grid-template-columns:1fr;
+            }
+        }
+
+        @media (max-width: 900px){
+            .contact-hero-image{
+                height:260px;
+            }
+
+            .contact-hero-copy h1{
+                font-size:40px;
+            }
+
+            .contact-panel-header h2,
+            .contact-info-header h2{
+                font-size:31px;
+            }
+        }
+
+        @media (max-width: 640px){
+            .contact-page{
+                padding:22px 14px 18px;
+            }
+
+            .contact-hero-copy{
+                padding:24px 18px 28px;
+            }
+
+            .contact-hero-copy h1{
+                font-size:30px;
+                line-height:1.06;
+            }
+
+            .contact-hero-copy p,
+            .contact-panel-header p,
+            .contact-info-header p{
+                font-size:15px;
+            }
+
+            .contact-panel,
+            .contact-info-panel{
+                padding:18px;
+            }
+
+            .contact-panel-header h2,
+            .contact-info-header h2{
+                font-size:26px;
+            }
+
+            .contact-callout{
+                width:100%;
+            }
+
+            .contact-submit{
+                width:100%;
+                min-width:0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="nav-clean">
+    <div class="nav-inner">
+        <a href="index.html" class="logo-link">
+            <img src="logo1.png" class="logo-clean" alt="My Happy Donut">
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="gallery.html">Gallery</a>
+            <a class="active" href="contact.html">Contact</a>
         </nav>
-        
-        <section id="form">
+    </div>
+</header>
 
-        <h2>Contact Us</h2>
+<section class="contact-page">
+    <div class="contact-hero">
+        <img src="about.jpg" class="contact-hero-image" alt="My Happy Donut interior">
 
-        <div class="container">
+        <div class="contact-hero-copy">
+            <p class="tagline">Questions • Orders • Catering</p>
 
-            <form action="https://formspree.io/f/xwkavzbe" method="POST">
+            <h1>Get in touch</h1>
 
-                <input data-aos="zoom-in-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom" type="text" id="fname" name="fname" placeholder="Full Name"><br>
+            <p>
+                Reach out for general questions, large orders, catering, lotto, billing, or anything else.
+                We’d be happy to hear from you.
+            </p>
 
-
-                <input data-aos="zoom-in-up" data-aos-duration="2000" data-aos-anchor-placement="top-bottom" type="text" id="email_address" name="email_address" placeholder="Email"><br>
-
-                <select data-aos="zoom-in-up" data-aos-duration="2500" data-aos-anchor-placement="top-bottom" id="service" name="service">
-                 <option value="General">General</option>
-                 <option value="Logo">Large Order</option>
-                 <option value="Icon">Catering</option>
-                 <option value="Flyer">Lotto</option>
-                 <option value="Newsletter">Billing</option>
-                 <option value="Other">Other</option>
-                 </select><br>
-
-                <textarea data-aos="zoom-in-up" data-aos-duration="2700" data-aos-anchor-placement="top-bottom" id="message" name="message" placeholder="Write Something..."></textarea><br>
-
-                <input data-aos="flip-right" data-aos-duration="2000" data-aos-delay="1500" data-aos-anchor-placement="top-bottom" type="submit" value="Submit">
-            </form><br><br><br>
+            <div class="contact-callout-row">
+                <a href="tel:14159569189" class="contact-callout">(415) 956-9189</a>
+                <a href="menu.html" class="btn-primary">View Menu</a>
+            </div>
         </div>
-    </section>
-        
-       
-        
-        <div id="number">
-        
-        <a style="text-decoration: none;cursor:pointer" href="tel:14159569189"><h3>(415) 956-9189</h3></a><br><br>
-            
+    </div>
+
+    <div class="contact-content">
+        <div class="contact-panel">
+            <div class="contact-panel-header">
+                <p class="contact-kicker">Send a message</p>
+                <h2>Contact us</h2>
+                <p>
+                    Fill out the form below and we’ll get back to you as soon as we can.
+                </p>
+            </div>
+
+            <form class="contact-form" action="https://formspree.io/f/xwkavzbe" method="POST">
+                <input type="text" id="fname" name="fname" placeholder="Full Name">
+                <input type="text" id="email_address" name="email_address" placeholder="Email">
+
+                <select id="service" name="service">
+                    <option value="General">General</option>
+                    <option value="Large Order">Large Order</option>
+                    <option value="Catering">Catering</option>
+                    <option value="Lotto">Lotto</option>
+                    <option value="Billing">Billing</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <textarea id="message" name="message" placeholder="Write Something..."></textarea>
+
+                <button type="submit" class="contact-submit">Submit</button>
+            </form>
         </div>
 
-        <footer>
-            
-            <a id="sociallink" href="https://www.facebook.com/myhappyplace145"> <img  data-aos="spin" data-aos-duration="1000" src="Facebook.png"></a>
-            
-            <a id="sociallink" href="https://vm.tiktok.com/ZMebN3QSD/"> <img  data-aos="spin" data-aos-duration="1000" data-aos-delay="300" src="Tiktok.png"></a>
-            
-            <a id="sociallink" href="https://www.instagram.com/ddcmyhappydonuts/"><img  data-aos="spin" data-aos-duration="1000" data-aos-delay="600" src="Instagram.png"></a><br><br>
-            
-            <p>&copy; My Happy Donut 2021</p>
-            
-            <a href="https://menu-made.com/"><img id="menumade" src="MENULOGO.jpg"></a> 
-            
-        </footer>
-        
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-        
-        <script>
-        
-        var loader = document.getElementById("preloader");
-        
-        window.addEventListener("load", function(){loader.style.display = "none"})
-        
-    </script>
-        
-    </body>
+        <div class="contact-info-panel">
+            <div class="contact-info-header">
+                <p class="contact-kicker">Visit or call</p>
+                <h2>Need something quickly?</h2>
+                <p>
+                    Stop by, give us a call, or reach out on social if you need to get in touch fast.
+                </p>
+            </div>
+
+            <div class="contact-info-list">
+                <div class="contact-info-item">
+                    <h3>Phone</h3>
+                    <p><a href="tel:14159569189">(415) 956-9189</a></p>
+                </div>
+
+                <div class="contact-info-item">
+                    <h3>Address</h3>
+                    <p>
+                        <a href="https://maps.google.com/?q=145+Columbus+Ave+San+Francisco+CA+94133" target="_blank" rel="noopener noreferrer">
+                            145 Columbus Ave<br>San Francisco, CA 94133
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-info-item">
+                    <h3>Hours</h3>
+                    <p>Mon–Sat 6AM–12AM<br>Sun 6AM–8PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-clean">
+    <div class="footer-socials">
+        <a href="https://www.facebook.com/myhappyplace145" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="Facebook.png" alt="Facebook">
+        </a>
+        <a href="https://vm.tiktok.com/ZMebN3QSD/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <img src="Tiktok.png" alt="TikTok">
+        </a>
+        <a href="https://www.instagram.com/ddcmyhappydonuts/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="Instagram.png" alt="Instagram">
+        </a>
+    </div>
+    <p>© 2026 My Happy Donut</p>
+</footer>
+
+</body>
 </html>

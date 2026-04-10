@@ -1,150 +1,286 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Happy Donut - Menu</title>
+    <meta name="description" content="View the My Happy Donut menu for donuts, coffee, sandwiches, and breakfast favorites in San Francisco.">
 
-<html>
-    <head>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    
-        <meta property="og:title" content="My Happy Donut" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="400" />
-        <meta property="og:image:height" content="300" />
-        <meta property="og:image" content="https://i.ibb.co/k8GpLrp/logo2.jpg" />
-	    <meta property="og:image:secure_url" content="https://i.ibb.co/k8GpLrp/logo2.jpg" />
-        <meta name="keywords" content="Restaurant Diner Donuts Breakfast Coffee">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>MY HAPPY DONUT - Menu</title>
-        <meta name="description" content="24 Hour Donut Coffee And Breakfast Cafe">
-        <link rel="stylesheet" href="main.css">
-        <link rel="shortcut icon" type="image/png" href="PinkDonut.png">
-        <link href="https://fonts.googleapis.com/css?family=Federant|Tauri|Kaushan+Script|Rammetto+One|Righteous|Poetsen+One|Kanit|Quintessential" rel="stylesheet"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-197643214-1">
-        </script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="PinkDonut.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="parallax.js" defer></script>
 
-          gtag('config', 'UA-197643214-1');
-        </script>
-        
-    </head>
+    <link rel="stylesheet" href="mm-a11y.css">
+    <script src="mm-a11y.js" defer></script>
     
-    <body id="animated-example" class="animated fadeOut">
-        
-        <div id="preloader">Loading . . .</div>
-        
-        <script>window.addEventListener("beforeunload", function () {
-  document.body.classList.add("animate-out");
-            });</script>
-
-        
-        <nav>
- 
-            
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9747;</a>
-                <a href="index.html">Home</a>
-                <a style= "text-decoration: underline; text-underline-position: under;" href="menu.html">Menu</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-            </div>
-
-            <span data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" style="float:right;margin-top: 10px;cursor:pointer" onclick="openNav()">
-            <img class=navicon src="BurgerLogo.png">
-            </span>
-
-        <script>
-            
-            
-            
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "175px";
+    <style>
+        .menu-page{
+            padding:34px 20px 24px;
         }
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
+        .menu-hero{
+            max-width:1140px;
+            margin:0 auto 24px;
+            background:linear-gradient(180deg, rgba(108, 43, 87, 0.96), rgba(48, 3, 58, 0.95));
+            border:1px solid var(--border);
+            border-radius:26px;
+            overflow:hidden;
+            box-shadow:var(--shadow);
         }
-        </script>
 
-            <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"><a href="#openModal99"><img class="logo" src="logo1.png"></a></div>
-        
-                <div id="openModal99" class="modalDialog">
-                <div>
-                    <h5>This location was opened in 1995 and has been family owned and operated for 25 years. Starting off as a small donut shop, we have grown throughout the years and serve a various selection of donuts, Pastry’s, Bagels, Sandwiches and Breakfast dishes. Right in the center of Chinatown, Little Italy and the Financial district, come by and join us for one of our most popular donuts – The Apple Fritter – or if you have a bigger appetite, the All-American Breakfast.
-                    Come visit us in the historic San Francisco Chinatown district. We are located right across the street from Columbus Tower (The Sentinal Building), a block away from Transamerica Pyramid, a block away from Hilton Financial District, in walking distance of the Dragon’s Gate (Chinatown entrance). Union Square shopping district, North Beach Little Italy, Coit Tower and a bike ride away from Ghirardelli Square and Pier 39 in Fisherman’s Wharf.</h5>
+        .menu-hero-image{
+            width:100%;
+            height:500px;
+            object-fit:cover;
+            object-position:center;
+            border-bottom:1px solid var(--border);
+        }
 
-		          <a href="#close" title="Close" class="close">&#9747;</a>
-                </div></div>
-            
-            <div class="desktop">
-                
-                <section data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" class="desknav">
-                    <a href="index.html">Home</a>
-                    <a style="text-shadow: 1px 1px 0px #fff, -1px -1px 0px #fff, -1px 1px 0px #fff, 1px -1px 0px #fff;color: #70006B;" href="menu.html">Menu</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="contact.html">Contact</a>
-                </section>
-            
-            </div>
-                    
+        .menu-hero-copy{
+            padding:34px 30px 38px;
+            text-align:center;
+        }
+
+        .menu-hero-copy h1{
+            max-width:920px;
+            margin:0 auto 16px;
+            font-family:'Cherry Cream Soda', cursive;
+            font-size:54px;
+            line-height:1.04;
+            letter-spacing:0.3px;
+            color:#fff4fb;
+        }
+
+        .menu-hero-copy p{
+            max-width:760px;
+            margin:0 auto 24px;
+            font-size:17px;
+            color:var(--muted);
+        }
+
+        .menu-callout{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            margin-top:18px;
+            padding:12px 20px;
+            border-radius:999px;
+            text-decoration:none;
+            font-weight:700;
+            font-size:15px;
+            color:var(--text);
+            background:rgba(255,155,211,0.08);
+            border:1px solid var(--border);
+            transition:transform 0.18s ease, opacity 0.18s ease;
+        }
+
+        .menu-callout:hover{
+            transform:translateY(-1px);
+            opacity:0.96;
+        }
+
+        .menu-display-wrap{
+            max-width:1140px;
+            margin:0 auto 28px;
+        }
+
+        .menu-display{
+            background:linear-gradient(180deg, rgba(108, 43, 87, 0.96), rgba(48, 3, 58, 0.95));
+            border:1px solid var(--border);
+            border-radius:26px;
+            padding:26px;
+            box-shadow:var(--shadow);
+        }
+
+        .menu-header{
+            text-align:center;
+            margin-bottom:22px;
+        }
+
+        .menu-kicker{
+            margin-bottom:10px;
+            color:var(--pink-soft);
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:1.8px;
+            text-transform:uppercase;
+        }
+
+        .menu-header h2{
+            margin:0 0 10px;
+            font-family:'Cherry Cream Soda', cursive;
+            font-size:38px;
+            line-height:1.08;
+            color:#fff4fb;
+        }
+
+        .menu-header p{
+            max-width:680px;
+            margin:0 auto;
+            color:var(--muted);
+            font-size:16px;
+        }
+
+        .menu-panels{
+            display:grid;
+            gap:18px;
+        }
+
+        .menu-panel{
+            border:1px solid var(--border);
+            border-radius:20px;
+            overflow:hidden;
+            background:rgba(18, 0, 20, 0.35);
+        }
+
+        .menu-panel img{
+            width:100%;
+            height:auto;
+            display:block;
+        }
+
+        .menu-bottom-note{
+            max-width:920px;
+            margin:20px auto 0;
+            text-align:center;
+            color:var(--muted);
+            font-size:15px;
+        }
+
+        @media (max-width: 900px){
+            .menu-hero-image{
+                height:260px;
+            }
+
+            .menu-hero-copy h1{
+                font-size:40px;
+            }
+
+            .menu-header h2{
+                font-size:31px;
+            }
+        }
+
+        @media (max-width: 640px){
+            .menu-page{
+                padding:22px 14px 18px;
+            }
+
+            .menu-hero-copy{
+                padding:24px 18px 28px;
+            }
+
+            .menu-hero-copy h1{
+                font-size:30px;
+                line-height:1.06;
+            }
+
+            .menu-hero-copy p,
+            .menu-header p,
+            .menu-bottom-note{
+                font-size:15px;
+            }
+
+            .menu-display{
+                padding:18px;
+            }
+
+            .menu-header h2{
+                font-size:26px;
+            }
+
+            .menu-callout{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="nav-clean">
+    <div class="nav-inner">
+        <a href="index.html" class="logo-link">
+            <img src="logo1.png" class="logo-clean" alt="My Happy Donut">
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a class="active" href="menu.html">Menu</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
         </nav>
-        
-        
-       <div data-aos="zoom-in-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom" class="menu">
-            <div class="delivery-links" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-            <a href="https://www.grubhub.com/" target="_blank" rel="noopener noreferrer" class="delivery-btn grubhub">Order on Grubhub</a>
-            <a href="https://www.doordash.com/" target="_blank" rel="noopener noreferrer" class="delivery-btn doordash">Order on DoorDash</a>
-        </div>
-           <div id="number">
-        
-        <a style="text-decoration: none;cursor:pointer" href="tel:14159569189"><h3>(415) 956-9189</h3></a><br>
-            
-        </div>
-           
-        <img class="top" src="DonutMenu2025.png">
-        <img class="bottom" src="DonutMenu2025B.png">
-        
-      </div> 
-      
-        
-        <div id="number">
-        
-        <a style="text-decoration: none;cursor:pointer" href="tel:14159569189"><h3>(415) 956-9189</h3></a><br><br>
-            
-        </div>
+    </div>
+</header>
 
-        
-        <footer>
-            
-            <a id="sociallink" href="https://www.facebook.com/myhappyplace145"> <img  data-aos="spin" data-aos-duration="1000" src="Facebook.png"></a>
-            
-            <a id="sociallink" href="https://vm.tiktok.com/ZMebN3QSD/"> <img  data-aos="spin" data-aos-duration="1000" data-aos-delay="300" src="Tiktok.png"></a>
-            
-            <a id="sociallink" href="https://www.instagram.com/ddcmyhappydonuts/"><img  data-aos="spin" data-aos-duration="1000" data-aos-delay="600" src="Instagram.png"></a><br><br>
-            
-            <p>&copy; My Happy Donut 2021</p>
-            
-            <a href="https://menu-made.com/"><img id="menumade" src="MENULOGO.jpg"></a> 
-            
-        </footer>
-        
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-        
-       <script>
-        
-        var loader = document.getElementById("preloader");
-        
-        window.addEventListener("load", function(){loader.style.display = "none"})
-        
-    </script>
-        
-    </body>
+<section class="menu-page">
+    <div class="menu-hero">
+        <img src="26-small.jpg" class="menu-hero-image" alt="My Happy Donut menu items">
+
+        <div class="menu-hero-copy">
+            <p class="tagline">Donuts • Coffee • Breakfast</p>
+
+            <h1>Fresh favorites all day long</h1>
+
+            <p>
+                From classic donuts and coffee to deli sandwiches and breakfast plates,
+                here’s a look at what My Happy Donut is serving.
+            </p>
+
+            <div class="cta-row">
+                <a href="https://www.grubhub.com/" target="_blank" rel="noopener noreferrer" class="btn-primary">Order Grubhub</a>
+                <a href="https://www.doordash.com/" target="_blank" rel="noopener noreferrer" class="btn-primary">Order DoorDash</a>
+            </div>
+
+            <a href="tel:14159569189" class="menu-callout">(415) 956-9189</a>
+        </div>
+    </div>
+
+    <div class="menu-display-wrap">
+        <div class="menu-display">
+            <div class="menu-header">
+                <p class="menu-kicker">Full menu</p>
+                <h2>Take a look</h2>
+                <p>
+                    Browse our current menu and call us anytime with questions about large orders,
+                    breakfast, sandwiches, or daily favorites.
+                </p>
+            </div>
+
+            <div class="menu-panels">
+                <div class="menu-panel">
+                    <img src="DonutMenu2025.png" alt="My Happy Donut menu page one">
+                </div>
+
+                <div class="menu-panel">
+                    <img src="DonutMenu2025B.png" alt="My Happy Donut menu page two">
+                </div>
+            </div>
+
+            <p class="menu-bottom-note">
+                Looking for a quick pickup order? Use the delivery links above or give us a call directly.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-clean">
+    <div class="footer-socials">
+        <a href="https://www.facebook.com/myhappyplace145" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="Facebook.png" alt="Facebook">
+        </a>
+        <a href="https://vm.tiktok.com/ZMebN3QSD/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <img src="Tiktok.png" alt="TikTok">
+        </a>
+        <a href="https://www.instagram.com/ddcmyhappydonuts/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="Instagram.png" alt="Instagram">
+        </a>
+    </div>
+    <p>© 2026 My Happy Donut</p>
+</footer>
+
+</body>
 </html>
