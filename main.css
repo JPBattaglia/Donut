@@ -84,12 +84,17 @@ img{
     font-size:20px;
     font-weight:600;
     letter-spacing:0.2px;
-    transition:color 0.2s ease;
+    transition: .3s;
 }
 
-.nav-links a:hover,
 .nav-links a.active{
     color:var(--pink);
+    text-shadow: .5px .5px 1px white;
+}
+
+.nav-links a:hover{
+    color: var(--pink);
+    transition: .3s;
 }
 
 /* HERO */
@@ -168,6 +173,7 @@ img{
     font-weight:700;
     font-size:15px;
     transition:transform 0.18s ease, opacity 0.18s ease, border-color 0.18s ease;
+    border: 1px solid transparent;
 }
 
 .btn-primary{
@@ -183,9 +189,15 @@ img{
 }
 
 .btn-primary:hover,
-.btn-secondary:hover{
+.btn-secondary:hover, .contact-submit:hover{
     transform:translateY(-1px);
-    opacity:0.96;
+    border: 1px solid var(--pink);
+    box-shadow: 1px 1px 2px whitesmoke,
+                -1px 1px 2px whitesmoke,
+                1px -1px 2px whitesmoke,
+                -1px -1px 2px whitesmoke;
+    transition: .3s;
+    color: white;
 }
 
 /* INFO STRIP */
