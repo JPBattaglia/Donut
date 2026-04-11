@@ -1,3 +1,4 @@
+/* mm-a11y.css — FULL FILE */
 /* Menu-Made Accessibility Widget (portable) — My Happy Donut themed */
 :root{
   --mm-a11y-user-text-color: "";
@@ -285,10 +286,7 @@ html[data-mm-a11y-guide="1"] .mm-a11y-guide{
   display: block;
 }
 
-/* Portable page-level adjustments */
-html[data-mm-a11y-text="1"] body{ font-size: 110% !important; }
-html[data-mm-a11y-text="2"] body{ font-size: 125% !important; }
-html[data-mm-a11y-text="3"] body{ font-size: 150% !important; }
+/* Text size is handled dynamically in JS so existing headings keep their relative scale */
 
 html[data-mm-a11y-content-scale="1"] body{ zoom: 1.05; }
 html[data-mm-a11y-content-scale="2"] body{ zoom: 1.10; }
@@ -432,7 +430,7 @@ html[data-mm-a11y-has-bg-color="1"] body{
     padding: 0;
     opacity: 1 !important;
     visibility: visible !important;
-}
+  }
 
   .mm-a11y-grid-4{
     grid-template-columns: repeat(2, minmax(0,1fr));

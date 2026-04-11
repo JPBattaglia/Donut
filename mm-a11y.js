@@ -1,3 +1,4 @@
+/* mm-a11y.js — FULL FILE */
 /* Menu-Made Accessibility Widget (portable) — My Happy Donut themed */
 (function(){
   if (
@@ -51,6 +52,21 @@
     white: "#ffffff",
     black: "#000000"
   };
+
+  var TEXT_SCALE_MAP = {
+    0: 1,
+    1: 1.10,
+    2: 1.25,
+    3: 1.50
+  };
+
+  var TEXT_TARGET_SELECTOR = [
+    "h1","h2","h3","h4","h5","h6",
+    "p","li","a","span","label",
+    "button","input","textarea","select",
+    "td","th","blockquote","figcaption","small","strong","em",
+    "legend","summary"
+  ].join(",");
 
   var state = load();
   var resizeBound = false;
@@ -213,6 +229,88 @@
     }
   }
 
+  function shouldSkipTextTarget(el){
+    if (!el) return true;
+    if (el.closest(".mm-a11y-panel")) return true;
+    if (el.closest(".mm-a11y-launcher")) return true;
+    if (el.id === "mmA11yGuide") return true;
+    if (el.closest(".mm-a11y-guide")) return true;
+    return false;
+  }
+
+  function getTextTargets(){
+    if (!document.body) return [];
+    return Array.prototype.slice.call(
+      document.body.querySelectorAll(TEXT_TARGET_SELECTOR)
+    ).filter(function(el){
+      return !shouldSkipTextTarget(el);
+    });
+  }
+
+  function rememberBaseTextMetrics(el){
+    if (!el.dataset.mmA11yBaseFontSize) {
+      var cs = window.getComputedStyle(el);
+      var fontSize = parseFloat(cs.fontSize);
+      if (fontSize && isFinite(fontSize)) {
+        el.dataset.mmA11yBaseFontSize = String(fontSize);
+      }
+
+      var lineHeight = parseFloat(cs.lineHeight);
+      if (lineHeight && isFinite(lineHeight)) {
+        el.dataset.mmA11yBaseLineHeight = String(lineHeight);
+      }
+
+      el.dataset.mmA11yOrigInlineFontSize = el.style.fontSize || "";
+      el.dataset.mmA11yOrigInlineLineHeight = el.style.lineHeight || "";
+    }
+  }
+
+  function restoreTextMetrics(el){
+    if (typeof el.dataset.mmA11yOrigInlineFontSize !== "undefined") {
+      if (el.dataset.mmA11yOrigInlineFontSize) el.style.fontSize = el.dataset.mmA11yOrigInlineFontSize;
+      else el.style.removeProperty("font-size");
+    } else {
+      el.style.removeProperty("font-size");
+    }
+
+    if (typeof el.dataset.mmA11yOrigInlineLineHeight !== "undefined") {
+      if (el.dataset.mmA11yOrigInlineLineHeight) el.style.lineHeight = el.dataset.mmA11yOrigInlineLineHeight;
+      else el.style.removeProperty("line-height");
+    } else {
+      el.style.removeProperty("line-height");
+    }
+  }
+
+  function applyDynamicTextSizing(){
+    var multiplier = TEXT_SCALE_MAP[state.text] || 1;
+    var targets = getTextTargets();
+
+    targets.forEach(function(el){
+      rememberBaseTextMetrics(el);
+
+      if (multiplier === 1) {
+        restoreTextMetrics(el);
+        return;
+      }
+
+      var baseFontSize = parseFloat(el.dataset.mmA11yBaseFontSize || "");
+      if (baseFontSize && isFinite(baseFontSize)) {
+        el.style.fontSize = (baseFontSize * multiplier).toFixed(2) + "px";
+      }
+
+      var tag = (el.tagName || "").toLowerCase();
+      var isHeading = /^h[1-6]$/.test(tag);
+
+      if (!isHeading) {
+        var baseLineHeight = parseFloat(el.dataset.mmA11yBaseLineHeight || "");
+        if (baseLineHeight && isFinite(baseLineHeight)) {
+          var lineMultiplier = multiplier < 1.2 ? 1.08 : (multiplier < 1.4 ? 1.12 : 1.16);
+          el.style.lineHeight = (baseLineHeight * lineMultiplier).toFixed(2) + "px";
+        }
+      }
+    });
+  }
+
   function apply(){
     setAttr("data-mm-a11y-text", state.text ? String(state.text) : "");
     setAttr("data-mm-a11y-content-scale", state.contentScale ? String(state.contentScale) : "");
@@ -262,6 +360,7 @@
     updateValueLabels();
     applyColorVars();
     applyMediaMute();
+    applyDynamicTextSizing();
     adjustPosition();
   }
 
@@ -387,6 +486,22 @@
       }, { passive: true });
       touchMoveBound = true;
     }
+  }
+
+  function bindDynamicTextObserver(){
+    if (window.__mmA11yTextObserverBound) return;
+    if (!window.MutationObserver || !document.body) return;
+
+    var observer = new MutationObserver(function(){
+      if (state.text) applyDynamicTextSizing();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    window.__mmA11yTextObserverBound = true;
   }
 
   function removeExistingDom(){
@@ -515,6 +630,7 @@
     adjustPosition();
     bindPositioning();
     bindGuideTracking();
+    bindDynamicTextObserver();
 
     launcher.addEventListener("click", function(){
       state.open = !state.open;
