@@ -1,3 +1,7 @@
+if (window.MM_A11Y_ENABLED === false) {
+  return;
+}
+
 /* mm-a11y.js — FULL FILE */
 /* Menu-Made Accessibility Widget (portable) — My Happy Donut themed */
 (function(){
@@ -453,239 +457,115 @@
     if (el) el.addEventListener("click", fn);
   }
 
-  function ensureCssLoaded(){
-    var href = window.MM_A11Y_CSS_HREF;
-    if (!href) return;
-    if (document.querySelector('link[data-mm-a11y-css="1"]')) return;
-    var link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = href;
-    link.setAttribute("data-mm-a11y-css", "1");
-    document.head.appendChild(link);
-  }
-
-  function bindGuideTracking(){
-    if (!mouseMoveBound) {
-      window.addEventListener("mousemove", function(e){
-        if (!state.guide) return;
-        var guide = getGuide();
-        if (!guide) return;
-        guide.style.top = Math.max(0, Math.min(window.innerHeight - 34, e.clientY - 17)) + "px";
-      }, { passive: true });
-      mouseMoveBound = true;
-    }
-
-    if (!touchMoveBound) {
-      window.addEventListener("touchmove", function(e){
-        if (!state.guide) return;
-        if (!e.touches || !e.touches[0]) return;
-        var guide = getGuide();
-        if (!guide) return;
-        var y = e.touches[0].clientY;
-        guide.style.top = Math.max(0, Math.min(window.innerHeight - 34, y - 17)) + "px";
-      }, { passive: true });
-      touchMoveBound = true;
-    }
-  }
-
-  function bindDynamicTextObserver(){
-    if (window.__mmA11yTextObserverBound) return;
-    if (!window.MutationObserver || !document.body) return;
-
-    var observer = new MutationObserver(function(){
-      if (state.text) applyDynamicTextSizing();
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    window.__mmA11yTextObserverBound = true;
-  }
-
-  function removeExistingDom(){
-    var existingLauncher = getLauncher();
-    var existingPanel = getPanel();
-    var existingGuide = getGuide();
-
-    if (existingLauncher) existingLauncher.remove();
-    if (existingPanel) existingPanel.remove();
-    if (existingGuide) existingGuide.remove();
-  }
-
   function build(){
-    if (
-      window.MenuMadeAccessibilityWidgetLoaded &&
-      getLauncher() &&
-      getPanel()
-    ) {
-      adjustPosition();
-      apply();
-      return;
-    }
-
-    removeExistingDom();
-    ensureCssLoaded();
+    if (document.getElementById("mmA11yLauncher")) return;
 
     var launcher = document.createElement("button");
-    launcher.type = "button";
-    launcher.className = "mm-a11y-launcher";
     launcher.id = "mmA11yLauncher";
-    launcher.setAttribute("aria-label", "Accessibility tools");
-    launcher.innerHTML =
-      '<img src="' + ICON_SRC + '" alt="Accessibility" class="mm-a11y-launcher-img">';
+    launcher.className = "mm-a11y-launcher";
+    launcher.type = "button";
+    launcher.setAttribute("aria-label", "Open accessibility tools");
+    launcher.innerHTML = '<img class="mm-a11y-launcher-img" src="' + ICON_SRC + '" alt="">';
 
-    var panel = document.createElement("aside");
-    panel.className = "mm-a11y-panel";
+    var panel = document.createElement("div");
     panel.id = "mmA11yPanel";
-    panel.setAttribute("role", "dialog");
-    panel.setAttribute("aria-label", "Accessibility tools panel");
+    panel.className = "mm-a11y-panel";
     panel.setAttribute("aria-hidden", state.open ? "false" : "true");
 
     panel.innerHTML =
       '<div class="mm-a11y-head">' +
-        '<div class="mm-a11y-head-copy">' +
-          '<p class="mm-a11y-title">My Happy Donut Accessibility</p>' +
-          '<p class="mm-a11y-sub">Usability controls to improve readability, contrast, focus, and overall browsing comfort.</p>' +
-        "</div>" +
-        '<button type="button" class="mm-a11y-close" id="mmA11yClose" aria-label="Close">Close</button>' +
-      "</div>" +
-
+        '<div>' +
+          '<h2 class="mm-a11y-title">Accessibility</h2>' +
+          '<p class="mm-a11y-sub">Adjust readability, contrast, spacing, motion, and more.</p>' +
+        '</div>' +
+        '<button type="button" class="mm-a11y-close" id="mmA11yClose">Close</button>' +
+      '</div>' +
       '<div class="mm-a11y-body">' +
-
-        section(
-          "Content Adjustments",
-          sliderRow("Text Size", "mmA11yTextDown", "mmA11yTextUp", "mmA11yTextValue") +
-          '<div class="mm-a11y-grid mm-a11y-grid-4" aria-label="Text presets">' +
-            btn("mmA11yText0", "Default") +
-            btn("mmA11yText1", "Large") +
-            btn("mmA11yText2", "XL") +
-            btn("mmA11yText3", "XXL") +
-          "</div>" +
-
-          sliderRow("Content Scaling", "mmA11yContentDown", "mmA11yContentUp", "mmA11yContentValue") +
-          sliderRow("Line Height", "mmA11yLineDown", "mmA11yLineUp", "mmA11yLineValue") +
-          sliderRow("Letter Spacing", "mmA11yLetterDown", "mmA11yLetterUp", "mmA11yLetterValue") +
-
+        section("Text", [
+          sliderRow("Text Size", "mmA11yTextDown", "mmA11yTextUp", "mmA11yTextValue"),
+          sliderRow("Content Scale", "mmA11yContentDown", "mmA11yContentUp", "mmA11yContentValue"),
+          sliderRow("Line Height", "mmA11yLineDown", "mmA11yLineUp", "mmA11yLineValue"),
+          sliderRow("Letter Spacing", "mmA11yLetterDown", "mmA11yLetterUp", "mmA11yLetterValue"),
           '<div class="mm-a11y-grid">' +
             btn("mmA11yReadable", "Readable Font") +
+            btn("mmA11yUnderline", "Underline Links") +
             btn("mmA11yTitles", "Highlight Titles") +
             btn("mmA11yLinks", "Highlight Links") +
-            btn("mmA11yUnderline", "Underline Links") +
-          "</div>" +
-
-          '<div class="mm-a11y-align-row">' +
-            btn("mmA11yAlignLeft", "Align Left", "mm-a11y-btn mm-a11y-pill-btn") +
-            btn("mmA11yAlignCenter", "Align Center", "mm-a11y-btn mm-a11y-pill-btn") +
-            btn("mmA11yAlignRight", "Align Right", "mm-a11y-btn mm-a11y-pill-btn") +
-          "</div>"
-        ) +
-
-        section(
-          "Color Adjustments",
+          '</div>'
+        ].join("")) +
+        section("Contrast & Color", [
           '<div class="mm-a11y-grid">' +
             btn("mmA11yDarkContrast", "Dark Contrast") +
             btn("mmA11yLightContrast", "Light Contrast") +
-            btn("mmA11yHighContrast", "High Contrast") +
-            btn("mmA11yGray", "Grayscale") +
+            btn("mmA11yHighContrast", "High Contrast", "mm-a11y-btn mm-a11y-wide") +
             btn("mmA11yLowSat", "Low Saturation") +
             btn("mmA11yHighSat", "High Saturation") +
             btn("mmA11yMono", "Monochrome") +
-            btn("mmA11yImages", "Hide Images") +
-          "</div>" +
-
-          colorRow("Text Color", "mmTextColor") +
-          colorRow("Title Color", "mmTitleColor") +
+          '</div>',
+          colorRow("Text Color", "mmTextColor"),
+          colorRow("Title Color", "mmTitleColor"),
           colorRow("Background Color", "mmBgColor")
-        ) +
-
-        section(
-          "Orientation & Interaction",
+        ].join("")) +
+        section("Structure & Focus", [
           '<div class="mm-a11y-grid">' +
-            btn("mmA11yMotion", "Stop Animations") +
-            btn("mmA11yFocus", "Highlight Focus") +
+            btn("mmA11yFocus", "Focus Highlight") +
             btn("mmA11yGuideBtn", "Reading Guide") +
+            btn("mmA11yImages", "Hide Images") +
             btn("mmA11yMute", "Mute Sounds") +
-          "</div>"
-        ) +
-
-        section(
-          "Actions",
-          '<div class="mm-a11y-grid">' +
-            btn("mmA11yReset", "Reset Settings", "mm-a11y-btn mm-a11y-wide") +
-          "</div>"
-        ) +
-
-      "</div>";
+            btn("mmA11yMotion", "Reduce Motion") +
+            btn("mmA11yGray", "Grayscale") +
+          '</div>' +
+          '<div class="mm-a11y-align-row">' +
+            btn("mmA11yAlignLeft", "Left", "mm-a11y-btn mm-a11y-pill-btn") +
+            btn("mmA11yAlignCenter", "Center", "mm-a11y-btn mm-a11y-pill-btn") +
+            btn("mmA11yAlignRight", "Right", "mm-a11y-btn mm-a11y-pill-btn") +
+          '</div>'
+        ].join("")) +
+        '<div class="mm-a11y-footer">' +
+          '<button type="button" class="mm-a11y-cancel" id="mmA11yReset">Reset All</button>' +
+        '</div>' +
+      '</div>';
 
     var guide = document.createElement("div");
-    guide.className = "mm-a11y-guide";
     guide.id = "mmA11yGuide";
+    guide.className = "mm-a11y-guide";
 
     document.body.appendChild(launcher);
     document.body.appendChild(panel);
     document.body.appendChild(guide);
 
-    adjustPosition();
-    bindPositioning();
-    bindGuideTracking();
-    bindDynamicTextObserver();
-
     launcher.addEventListener("click", function(){
       state.open = !state.open;
       save();
       panel.setAttribute("aria-hidden", state.open ? "false" : "true");
-      if (state.open){
-        var close = document.getElementById("mmA11yClose");
-        if (close) close.focus();
-      }
-    });
-
-    panel.addEventListener("keydown", function(e){
-      if (e.key === "Escape"){
-        state.open = false;
-        save();
-        panel.setAttribute("aria-hidden", "true");
-        launcher.focus();
-      }
     });
 
     on("mmA11yClose", function(){
       state.open = false;
       save();
       panel.setAttribute("aria-hidden", "true");
-      launcher.focus();
     });
 
-    on("mmA11yText0", function(){ state.text = 0; save(); apply(); });
-    on("mmA11yText1", function(){ state.text = 1; save(); apply(); });
-    on("mmA11yText2", function(){ state.text = 2; save(); apply(); });
-    on("mmA11yText3", function(){ state.text = 3; save(); apply(); });
+    on("mmA11yReset", function(){
+      resetState();
+    });
 
     step("mmA11yTextDown", "text", -1, 0, 3);
     step("mmA11yTextUp", "text", 1, 0, 3);
+
     step("mmA11yContentDown", "contentScale", -1, 0, 3);
     step("mmA11yContentUp", "contentScale", 1, 0, 3);
+
     step("mmA11yLineDown", "lineHeight", -1, 0, 3);
     step("mmA11yLineUp", "lineHeight", 1, 0, 3);
+
     step("mmA11yLetterDown", "letterSpacing", -1, 0, 3);
     step("mmA11yLetterUp", "letterSpacing", 1, 0, 3);
 
-    on("mmA11yUnderline", function(){ state.underline = !state.underline; save(); apply(); });
-    on("mmA11yMotion", function(){ state.reduceMotion = !state.reduceMotion; save(); apply(); });
-    on("mmA11yGray", function(){ state.grayscale = !state.grayscale; save(); apply(); });
-    on("mmA11yGuideBtn", function(){ state.guide = !state.guide; save(); apply(); });
     on("mmA11yReadable", function(){ state.readableFont = !state.readableFont; save(); apply(); });
+    on("mmA11yUnderline", function(){ state.underline = !state.underline; save(); apply(); });
     on("mmA11yTitles", function(){ state.highlightTitles = !state.highlightTitles; save(); apply(); });
     on("mmA11yLinks", function(){ state.highlightLinks = !state.highlightLinks; save(); apply(); });
-    on("mmA11yFocus", function(){ state.focusHighlight = !state.focusHighlight; save(); apply(); });
-    on("mmA11yImages", function(){ state.hideImages = !state.hideImages; save(); apply(); });
-    on("mmA11yMute", function(){
-      state.muteSounds = !state.muteSounds;
-      save();
-      apply();
-    });
 
     on("mmA11yDarkContrast", function(){ state.contrastMode = state.contrastMode === "dark" ? "" : "dark"; save(); apply(); });
     on("mmA11yLightContrast", function(){ state.contrastMode = state.contrastMode === "light" ? "" : "light"; save(); apply(); });
@@ -695,26 +575,29 @@
     on("mmA11yHighSat", function(){ state.saturationMode = state.saturationMode === "high" ? "" : "high"; save(); apply(); });
     on("mmA11yMono", function(){ state.saturationMode = state.saturationMode === "mono" ? "" : "mono"; save(); apply(); });
 
-    on("mmA11yAlignLeft", function(){ state.align = state.align === "left" ? "" : "left"; save(); apply(); });
-    on("mmA11yAlignCenter", function(){ state.align = state.align === "center" ? "" : "center"; save(); apply(); });
-    on("mmA11yAlignRight", function(){ state.align = state.align === "right" ? "" : "right"; save(); apply(); });
-
     bindColors("mmTextColor", "textColor");
     bindColors("mmTitleColor", "titleColor");
     bindColors("mmBgColor", "bgColor");
 
-    on("mmA11yReset", function(){
-      resetState();
-    });
+    on("mmA11yFocus", function(){ state.focusHighlight = !state.focusHighlight; save(); apply(); });
+    on("mmA11yGuideBtn", function(){ state.guide = !state.guide; save(); apply(); });
+    on("mmA11yImages", function(){ state.hideImages = !state.hideImages; save(); apply(); });
+    on("mmA11yMute", function(){ state.muteSounds = !state.muteSounds; save(); apply(); });
+    on("mmA11yMotion", function(){ state.reduceMotion = !state.reduceMotion; save(); apply(); });
+    on("mmA11yGray", function(){ state.grayscale = !state.grayscale; save(); apply(); });
 
-    window.MenuMadeAccessibilityWidgetLoaded = true;
+    on("mmA11yAlignLeft", function(){ state.align = state.align === "left" ? "" : "left"; save(); apply(); });
+    on("mmA11yAlignCenter", function(){ state.align = state.align === "center" ? "" : "center"; save(); apply(); });
+    on("mmA11yAlignRight", function(){ state.align = state.align === "right" ? "" : "right"; save(); apply(); });
+
+    bindPositioning();
     apply();
+    window.MenuMadeAccessibilityWidgetLoaded = true;
   }
 
-  function ready(fn){
-    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
-    else fn();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", build);
+  } else {
+    build();
   }
-
-  ready(build);
 })();
