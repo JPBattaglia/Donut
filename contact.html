@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page-contact">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Happy Donut - Contact</title>
     <meta name="description" content="Contact My Happy Donut for general questions, large orders, catering, lotto, billing, and more.">
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css?v=20261121">
     <link rel="shortcut icon" href="PinkDonut.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,301 +16,8 @@
     <script>
       window.MM_A11Y_ENABLED = false;
     </script>
-    <link rel="stylesheet" href="mm-a11y.css">
     <script src="mm-a11y.js" defer></script>
     
-    <style>
-        .contact-page{
-            padding:34px 20px 24px;
-        }
-
-        .contact-hero{
-            max-width:1140px;
-            margin:0 auto 24px;
-            background:linear-gradient(180deg, rgba(108, 43, 87, 0.96), rgba(48, 3, 58, 0.95));
-            border:1px solid var(--border);
-            border-radius:26px;
-            overflow:hidden;
-            box-shadow:var(--shadow);
-        }
-
-        .contact-hero-image{
-            width:100%;
-            height:320px;
-            object-fit:cover;
-            object-position:center;
-            border-bottom:1px solid var(--border);
-        }
-
-        .contact-hero-copy{
-            padding:34px 30px 38px;
-            text-align:center;
-        }
-
-        .contact-hero-copy h1{
-            max-width:920px;
-            margin:0 auto 16px;
-            font-family:'Cherry Cream Soda', cursive;
-            font-size:54px;
-            line-height:1.04;
-            letter-spacing:0.3px;
-            color:#fff4fb;
-        }
-
-        .contact-hero-copy p{
-            max-width:760px;
-            margin:0 auto 24px;
-            font-size:17px;
-            color:var(--muted);
-        }
-
-        .contact-callout-row{
-            display:flex;
-            justify-content:center;
-            gap:14px;
-            flex-wrap:wrap;
-            margin-top:18px;
-        }
-
-        .contact-callout{
-            display:inline-flex;
-            align-items:center;
-            justify-content:center;
-            padding:12px 20px;
-            border-radius:999px;
-            text-decoration:none;
-            font-weight:700;
-            font-size:15px;
-            color:var(--text);
-            background:rgba(255,155,211,0.08);
-            border:1px solid var(--border);
-            transition:transform 0.18s ease, opacity 0.18s ease;
-        }
-
-        .contact-callout:hover{
-            transform:translateY(-1px);
-            opacity:0.96;
-        }
-
-        .contact-content{
-            max-width:1140px;
-            margin:0 auto 28px;
-            display:grid;
-            grid-template-columns:1.15fr 0.85fr;
-            gap:22px;
-        }
-
-        .contact-panel,
-        .contact-info-panel{
-            background:linear-gradient(180deg, rgba(108, 43, 87, 0.96), rgba(48, 3, 58, 0.95));
-            border:1px solid var(--border);
-            border-radius:26px;
-            padding:26px;
-            box-shadow:var(--shadow);
-        }
-
-        .contact-panel-header,
-        .contact-info-header{
-            text-align:center;
-            margin-bottom:22px;
-        }
-
-        .contact-kicker{
-            margin-bottom:10px;
-            color:var(--pink-soft);
-            font-size:12px;
-            font-weight:700;
-            letter-spacing:1.8px;
-            text-transform:uppercase;
-        }
-
-        .contact-panel-header h2,
-        .contact-info-header h2{
-            margin:0 0 10px;
-            font-family:'Cherry Cream Soda', cursive;
-            font-size:38px;
-            line-height:1.08;
-            color:#fff4fb;
-        }
-
-        .contact-panel-header p,
-        .contact-info-header p{
-            max-width:680px;
-            margin:0 auto;
-            color:var(--muted);
-            font-size:16px;
-        }
-
-        .contact-form{
-            display:grid;
-            gap:16px;
-        }
-
-        .contact-form input,
-        .contact-form select,
-        .contact-form textarea{
-            width:100%;
-            border:1px solid var(--border);
-            border-radius:18px;
-            background:rgba(18, 0, 20, 0.45);
-            color:var(--text);
-            font-family:'Inter', sans-serif;
-            font-size:16px;
-            padding:16px 18px;
-            outline:none;
-            box-shadow:none;
-            transition:border-color 0.18s ease, background 0.18s ease;
-        }
-
-        .contact-form input::placeholder,
-        .contact-form textarea::placeholder{
-            color:#c79ebd;
-            opacity:1;
-        }
-
-        .contact-form input:focus,
-        .contact-form select:focus,
-        .contact-form textarea:focus{
-            border-color:var(--pink-soft);
-            background:rgba(18, 0, 20, 0.58);
-        }
-
-        .contact-form textarea{
-            min-height:180px;
-            resize:vertical;
-        }
-
-        .contact-form select{
-            appearance:none;
-            -webkit-appearance:none;
-            -moz-appearance:none;
-            cursor:pointer;
-        }
-
-        .contact-submit{
-            display:inline-flex;
-            align-items:center;
-            justify-content:center;
-            min-width:190px;
-            padding:14px 22px;
-            border-radius:999px;
-            text-decoration:none;
-            font-weight:700;
-            font-size:15px;
-            transition:transform 0.18s ease, opacity 0.18s ease, border-color 0.18s ease;
-            background:linear-gradient(180deg, var(--pink-soft), var(--pink));
-            color:#23031f;
-            box-shadow:0 10px 24px rgba(244,91,180,0.24);
-            border: 1px solid transparent;
-            cursor:pointer;
-            justify-self:center;
-            margin-top:4px;
-        }
-
-        .contact-submit:hover{
-            transform:translateY(-1px);
-            opacity:0.96;
-        }
-
-        .contact-info-list{
-            display:grid;
-            gap:16px;
-        }
-
-        .contact-info-item{
-            background:rgba(18, 0, 20, 0.35);
-            border:1px solid var(--border);
-            border-radius:20px;
-            padding:20px 18px;
-            text-align:center;
-        }
-
-        .contact-info-item h3{
-            margin:0 0 8px;
-            font-size:13px;
-            font-weight:700;
-            letter-spacing:1.3px;
-            text-transform:uppercase;
-            color:var(--pink-soft);
-            width:auto;
-            font-family:'Inter', sans-serif;
-            text-shadow:none;
-        }
-
-        .contact-info-item p{
-            width:auto;
-            margin:0;
-            color:var(--text);
-            font-size:16px;
-            font-family:'Inter', sans-serif;
-            text-align:center;
-        }
-
-        .contact-info-item a{
-            text-decoration:none;
-        }
-
-        @media (max-width: 980px){
-            .contact-content{
-                grid-template-columns:1fr;
-            }
-        }
-
-        @media (max-width: 900px){
-            .contact-hero-image{
-                height:260px;
-            }
-
-            .contact-hero-copy h1{
-                font-size:40px;
-            }
-
-            .contact-panel-header h2,
-            .contact-info-header h2{
-                font-size:31px;
-            }
-        }
-
-        @media (max-width: 640px){
-            .contact-page{
-                padding:22px 14px 18px;
-            }
-
-            .contact-hero-copy{
-                padding:24px 18px 28px;
-            }
-
-            .contact-hero-copy h1{
-                font-size:30px;
-                line-height:1.06;
-            }
-
-            .contact-hero-copy p,
-            .contact-panel-header p,
-            .contact-info-header p{
-                font-size:15px;
-            }
-
-            .contact-panel,
-            .contact-info-panel{
-                padding:18px;
-            }
-
-            .contact-panel-header h2,
-            .contact-info-header h2{
-                font-size:26px;
-            }
-
-            .contact-callout{
-                width:100%;
-            }
-
-            .contact-submit{
-                width:100%;
-                min-width:0;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -354,7 +61,7 @@
     <div class="contact-content">
         <div class="contact-panel">
             <div class="contact-panel-header">
-                <p style="color: pink; margin-bottom: 5px;" class="contact-kicker">Send a message</p>
+                <p class="contact-kicker kicker-pink">Send a message</p>
                 <h2>Contact us</h2>
                 <p>
                     Fill out the form below and we’ll get back to you as soon as we can.
@@ -382,7 +89,7 @@
 
         <div class="contact-info-panel">
             <div class="contact-info-header">
-                <p style="color: pink; margin-bottom: 5px;" class="contact-kicker">Visit or call</p>
+                <p class="contact-kicker kicker-pink">Visit or call</p>
                 <h2>Need something quickly?</h2>
                 <p>
                     Stop by, give us a call, or reach out on social if you need to get in touch fast.
