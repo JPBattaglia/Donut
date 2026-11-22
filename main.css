@@ -1607,6 +1607,12 @@ img{
   margin-bottom: 14px;
 }
 
+.page-menu .menu-top-btn .btn-primary {
+  color: #fff;
+  border: 2px solid #fff;
+  text-shadow: 0 1px 2px rgba(35, 3, 31, 0.55);
+}
+
 @media (max-width: 768px) {
   .page-menu .live-menu-actions {
     display: none;
