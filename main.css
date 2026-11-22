@@ -1559,7 +1559,7 @@ img{
   justify-content: center;
   gap: 28px;
   flex-wrap: wrap;
-  margin-top: 26px;
+  margin: 0 0 26px;
 }
 
 .page-menu .live-menu-qr {
