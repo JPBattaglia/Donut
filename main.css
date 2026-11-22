@@ -1600,3 +1600,23 @@ img{
   }
 }
 
+/* "Open the full menu" sits above the order buttons (owner, Nov 21, 2026). */
+.page-menu .menu-top-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 768px) {
+  .page-menu .live-menu-actions {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-menu .menu-top-btn .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
