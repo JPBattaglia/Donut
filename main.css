@@ -1581,6 +1581,13 @@ img{
   font-size: 15px;
 }
 
+/* A phone can't scan its own screen, so the QR code shows on bigger screens only (owner, Nov 21, 2026). */
+@media (max-width: 768px) {
+  .page-menu .live-menu-qr {
+    display: none;
+  }
+}
+
 @media (max-width: 640px) {
   .page-menu .live-menu-frame iframe {
     height: 75vh;
