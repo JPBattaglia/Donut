@@ -6,7 +6,7 @@
     <title>My Happy Donut - Menu</title>
     <meta name="description" content="View the My Happy Donut menu for donuts, coffee, sandwiches, and breakfast favorites in San Francisco.">
 
-    <link rel="stylesheet" href="main.css?v=20261121">
+    <link rel="stylesheet" href="main.css?v=20261121b">
     <link rel="shortcut icon" href="PinkDonut.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,18 +66,21 @@
                 <p class="menu-kicker kicker-pink">Full menu</p>
                 <h2>Take a look</h2>
                 <p>
-                    Browse our current menu and call us anytime with questions about large orders,
+                    Browse our current menu below and call us anytime with questions about large orders,
                     breakfast, sandwiches, or daily favorites.
                 </p>
             </div>
 
-            <div class="menu-panels">
-                <div class="menu-panel">
-                    <img src="DonutMenu2025.png" alt="My Happy Donut menu page one">
-                </div>
+            <div class="live-menu-frame">
+                <iframe src="https://menu-made.com/api/menu/my-happy-donut-90c9e311" title="My Happy Donut menu" loading="lazy"></iframe>
+            </div>
 
-                <div class="menu-panel">
-                    <img src="DonutMenu2025B.png" alt="My Happy Donut menu page two">
+            <div class="live-menu-actions">
+                <a href="https://menu-made.com/api/menu/my-happy-donut-90c9e311" target="_blank" rel="noopener noreferrer" class="btn-primary">Open the full menu</a>
+
+                <div class="live-menu-qr">
+                    <img src="menu-qr.png" alt="QR code that opens the My Happy Donut menu" width="140" height="140">
+                    <p>Scan to open our menu on your phone</p>
                 </div>
             </div>
 
